@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 2008 - Yunice Jam Matabile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e0d4 50%, #f0e6e8 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #d4c4b0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 300;
+            color: #6b5b73;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-btn {
+            background: none;
+            border: none;
+            font-size: 16px;
+            color: #6b5b73;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #d4c4b0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%;
+            margin-top: 4px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0e6e8;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #6b5b73;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 200;
+            color: #6b5b73;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #6b5b73;
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d4c4b0;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #8b7b83;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        .section p, .section li {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .spec-card {
+            background: #f8f4f0;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #6b5b73;
+        }
+
+        .spec-card h4 {
+            color: #6b5b73;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .spec-card p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .editions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .edition-card {
+            background: #f8f4f0;
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid #6b5b73;
+        }
+
+        .edition-card h4 {
+            color: #6b5b73;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .edition-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .edition-card ul {
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+
+        .edition-card li {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #d4c4b0;
+            color: #8b7b83;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Windows Server</div>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Windows 2008</button>
+                    <div class="dropdown-content">
+                        <a href="windows2008.html">Overview</a>
+                        <a href="#features">Features</a>
+                        <a href="#editions">Editions</a>
+                        <a href="#system-requirements">System Requirements</a>
+                        <a href="#installation">Installation</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Windows Server</button>
+                    <div class="dropdown-content">
+                        <a href="windows95.html">Windows 95</a>
+                        <a href="windows98.html">Windows 98</a>
+                        <a href="windowsme.html">Windows ME</a>
+                        <a href="windows2008.html">Windows 2008</a>
+                        <a href="windowsvista.html">Windows Vista</a>
+                        <a href="windows8.html">Windows 8</a>
+                        <a href="windows10.html">Windows 10</a>
+                        <a href="windows11.html">Windows 11</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <a href="index.html" class="back-link">← Back to Home</a>
+            
+            <h1>Windows Server 2008</h1>
+            
+            <div class="content">
+                <div class="section">
+                    <h2>Overview</h2>
+                    <p>Windows Server 2008, released on February 27, 2008, is a server operating system produced by Microsoft. Built on the Windows NT 6.0 kernel (same as Windows Vista), it represented a significant advancement in server technology, focusing on enhanced security, virtualization, and management capabilities.</p>
+                    <p>This server operating system introduced groundbreaking features like Server Core, Hyper-V virtualization, and improved PowerShell automation, setting new standards for enterprise computing infrastructure.</p>
+                </div>
+
+                <div id="features" class="section">
+                    <h2>Key Features</h2>
+                    <h3>Virtualization</h3>
+                    <ul>
+                        <li><strong>Hyper-V:</strong> Native hypervisor technology for server virtualization</li>
+                        <li><strong>Live Migration:</strong> Move running virtual machines between hosts without downtime</li>
+                        <li><strong>Snapshot Support:</strong> Point-in-time backups of virtual machines</li>
+                        <li><strong>Virtual Machine Management:</strong> Comprehensive VM administration tools</li>
+                    </ul>
+
+                    <h3>Security Enhancements</h3>
+                    <ul>
+                        <li><strong>BitLocker Drive Encryption:</strong> Full volume encryption for data protection</li>
+                        <li><strong>Network Access Protection (NAP):</strong> Health policy enforcement for network access</li>
+                        <li><strong>Read-Only Domain Controller:</strong> Enhanced security for branch offices</li>
+                        <li><strong>Windows Firewall with Advanced Security:</strong> Granular network protection</li>
+                    </ul>
+
+                    <h3>Management and Automation</h3>
+                    <ul>
+                        <li><strong>Server Manager:</strong> Unified server administration console</li>
+                        <li><strong>PowerShell 2.0:</strong> Advanced command-line and scripting capabilities</li>
+                        <li><strong>Server Core:</strong> Minimal installation option for reduced attack surface</li>
+                        <li><strong>Windows Deployment Services:</strong> Automated OS deployment</li>
+                    </ul>
+
+                    <h3>Web and Application Services</h3>
+                    <ul>
+                        <li><strong>IIS 7.0:</strong> Modular web server with enhanced security</li>
+                        <li><strong>Application Server Role:</strong> Simplified application deployment</li>
+                        <li><strong>Windows Communication Foundation:</strong> Service-oriented architecture framework</li>
+                        <li><strong>.NET Framework 3.5:</strong> Enhanced development platform</li>
+                    </ul>
+                </div>
+
+                <div id="editions" class="section">
+                    <h2>Editions</h2>
+                    <div class="editions-grid">
+                        <div class="edition-card">
+                            <h4>Web Server Edition</h4>
+                            <p>Optimized for web hosting and web application deployment.</p>
+                            <ul>
+                                <li>IIS 7.0 with full feature set</li>
+                                <li>Support for ASP.NET, PHP, and other web technologies</li>
+                                <li>Limited to 25 SMB connections</li>
+                                <li>No Active Directory support</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Standard Edition</h4>
+                            <p>Ideal for small to medium businesses with basic server needs.</p>
+                            <ul>
+                                <li>Supports up to 32 GB RAM</li>
+                                <li>Active Directory and file/print services</li>
+                                <li>Hyper-V virtualization (limited)</li>
+                                <li>Up to 250 CALs (Client Access Licenses)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Enterprise Edition</h4>
+                            <p>Designed for large enterprises with complex IT requirements.</p>
+                            <ul>
+                                <li>Supports up to 2 TB RAM</li>
+                                <li>Unlimited CALs</li>
+                                <li>Full Hyper-V virtualization capabilities</li>
+                                <li>Clustering and failover support</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Datacenter Edition</h4>
+                            <p>Ultimate edition for mission-critical applications and large-scale virtualization.</p>
+                            <ul>
+                                <li>Unlimited RAM support</li>
+                                <li>Unlimited virtualization rights</li>
+                                <li>Hot-add memory and processor support</li>
+                                <li>Advanced clustering and reliability features</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Windows Server 2008 for Itanium-Based Systems</h4>
+                            <p>Specialized edition for Itanium architecture systems.</p>
+                            <ul>
+                                <li>Support for Itanium processors</li>
+                                <li>Enterprise-level features</li>
+                                <li>Optimized for high-performance computing</li>
+                                <li>Limited hardware compatibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="system-requirements" class="section">
+                    <h2>System Requirements</h2>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <h4>Processor</h4>
+                            <p>1 GHz (x64) or faster processor (minimum)</p>
+                            <p>2 GHz or faster recommended</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Memory (RAM)</h4>
+                            <p>512 MB (minimum)</p>
+                            <p>2 GB or more recommended</p>
+                            <p>32 GB maximum for Standard Edition</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Storage</h4>
+                            <p>10 GB available disk space (minimum)</p>
+                            <p>40 GB or more recommended</p>
+                            <p>Additional space for features and roles</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Display</h4>
+                            <p>Super VGA (800x600) or higher resolution monitor</p>
+                            <p>Keyboard and Microsoft Mouse or compatible pointing device</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="installation" class="section">
+                    <h2>Installation Process</h2>
+                    <h3>Installation Options</h3>
+                    <ul>
+                        <li><strong>Full Installation:</strong> Complete GUI-based server with all management tools</li>
+                        <li><strong>Server Core Installation:</strong> Minimal footprint, command-line only administration</li>
+                        <li><strong>Upgrade Installation:</strong> Upgrade from Windows Server 2003</li>
+                        <li><strong>Clean Installation:</strong> Fresh installation on new hardware</li>
+                    </ul>
+
+                    <h3>Installation Steps</h3>
+                    <ol>
+                        <li><strong>Preparation:</strong> Verify hardware compatibility and backup existing data</li>
+                        <li><strong>Boot from Media:</strong> Start the server from installation DVD or USB</li>
+                        <li><strong>Language Selection:</strong> Choose language, time, and keyboard preferences</li>
+                        <li><strong>Installation Type:</strong> Select Custom (advanced) for clean installation</li>
+                        <li><strong>Partition Setup:</strong> Create and format disk partitions</li>
+                        <li><strong>Installation:</strong> Windows copies files and completes setup</li>
+                        <li><strong>Initial Configuration:</strong> Set administrator password and basic settings</li>
+                        <li><strong>Server Manager:</strong> Configure roles and features as needed</li>
+                    </ol>
+
+                    <h3>Post-Installation Configuration</h3>
+                    <ul>
+                        <li><strong>Windows Update:</strong> Install latest security patches and updates</li>
+                        <li><strong>Network Configuration:</strong> Set IP addresses and network settings</li>
+                        <li><strong>Role Installation:</strong> Add required server roles (Active Directory, IIS, etc.)</li>
+                        <li><strong>Security Settings:</strong> Configure firewall and security policies</li>
+                        <li><strong>Backup Setup:</strong> Configure backup and recovery systems</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Service Packs and Updates</h2>
+                    <h3>Windows Server 2008 SP1</h3>
+                    <p>Service Pack 1, released in April 2008, included:</p>
+                    <ul>
+                        <li>Security and stability improvements</li>
+                        <li>Enhanced virtualization features</li>
+                        <li>Performance optimizations</li>
+                        <li>Updated management tools</li>
+                    </ul>
+
+                    <h3>Windows Server 2008 R2</h3>
+                    <p>Released in October 2009, R2 was a major update featuring:</p>
+                    <ul>
+                        <li>Windows 7 kernel improvements</li>
+                        <li>Enhanced Hyper-V with Live Migration</li>
+                        <li>PowerShell 2.0 with hundreds of new cmdlets</li>
+                        <li>DirectAccess for seamless remote access</li>
+                        <li>BranchCache for improved branch office performance</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Legacy and End of Life</h2>
+                    <p>Windows Server 2008 reached its end of mainstream support on January 13, 2015, and extended support ended on January 14, 2020. Organizations were encouraged to migrate to Windows Server 2012, 2016, or 2019 to continue receiving security updates and support.</p>
+                    <p>Despite its age, many features introduced in Windows Server 2008 continue to influence modern server operating systems, particularly in virtualization, security, and management automation.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Yunice Jam Matabile | BSIT-S-2A | Windows Server Documentation</p>
+        </footer>
+    </div>
+</body>
+</html>

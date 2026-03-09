@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Vista - Yunice Jam Matabile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e0d4 50%, #f0e6e8 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #d4c4b0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 300;
+            color: #6b5b73;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-btn {
+            background: none;
+            border: none;
+            font-size: 16px;
+            color: #6b5b73;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #d4c4b0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%;
+            margin-top: 4px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0e6e8;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #6b5b73;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 200;
+            color: #6b5b73;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #6b5b73;
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d4c4b0;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #8b7b83;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        .section p, .section li {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .spec-card {
+            background: #f8f4f0;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #6b5b73;
+        }
+
+        .spec-card h4 {
+            color: #6b5b73;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .spec-card p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .editions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .edition-card {
+            background: #f8f4f0;
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid #6b5b73;
+        }
+
+        .edition-card h4 {
+            color: #6b5b73;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .edition-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .edition-card ul {
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+
+        .edition-card li {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #d4c4b0;
+            color: #8b7b83;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Windows Server</div>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Windows 2008</button>
+                    <div class="dropdown-content">
+                        <a href="windows2008.html">Overview</a>
+                        <a href="windows2008.html#features">Features</a>
+                        <a href="windows2008.html#editions">Editions</a>
+                        <a href="windows2008.html#system-requirements">System Requirements</a>
+                        <a href="windows2008.html#installation">Installation</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Windows Server</button>
+                    <div class="dropdown-content">
+                        <a href="windows95.html">Windows 95</a>
+                        <a href="windows98.html">Windows 98</a>
+                        <a href="windowsme.html">Windows ME</a>
+                        <a href="windows2008.html">Windows 2008</a>
+                        <a href="windowsvista.html">Windows Vista</a>
+                        <a href="windows8.html">Windows 8</a>
+                        <a href="windows10.html">Windows 10</a>
+                        <a href="windows11.html">Windows 11</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <a href="index.html" class="back-link">← Back to Home</a>
+            
+            <h1>Windows Vista</h1>
+            
+            <div class="content">
+                <div class="section">
+                    <h2>Overview</h2>
+                    <p>Windows Vista, released on January 30, 2007, was a major release of the Windows NT operating system. Following Windows XP, Vista introduced significant architectural changes, a new user interface, and enhanced security features. Despite its innovations, Vista faced mixed reception due to hardware requirements and compatibility issues.</p>
+                    <p>Built on the Windows NT 6.0 kernel, Vista represented Microsoft's most ambitious operating system overhaul since Windows 95, focusing on security, reliability, and user experience improvements.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Key Features</h2>
+                    <h3>User Interface</h3>
+                    <ul>
+                        <li><strong>Aero Glass:</strong> Transparent window effects with 3D animations</li>
+                        <li><strong>Windows Sidebar:</strong> Desktop gadgets for weather, news, and system information</li>
+                        <li><strong>Flip 3D:</strong> 3D window switching interface</li>
+                        <li><strong>Enhanced Start Menu:</strong> Integrated search and recently used programs</li>
+                    </ul>
+
+                    <h3>Security Features</h3>
+                    <ul>
+                        <li><strong>User Account Control (UAC):</strong> Elevated privilege prompts for system changes</li>
+                        <li><strong>Windows Defender:</strong> Built-in anti-spyware protection</li>
+                        <li><strong>BitLocker Drive Encryption:</strong> Full volume encryption for data protection</li>
+                        <li><strong>Windows Firewall:</strong> Enhanced outbound and inbound filtering</li>
+                    </ul>
+
+                    <h3>Search and Organization</h3>
+                    <ul>
+                        <li><strong>Instant Search:</strong> Real-time file and application searching</li>
+                        <li><strong>Enhanced File Management:</strong> Improved Windows Explorer with metadata support</li>
+                        <li><strong>Virtual Folders:</strong> Dynamic content-based folder organization</li>
+                        <li><strong>Photo Gallery:</strong> Enhanced image management and editing</li>
+                    </ul>
+
+                    <h3>Networking and Connectivity</h3>
+                    <ul>
+                        <li><strong>Network and Sharing Center:</strong> Centralized network management</li>
+                        <li><strong>Windows Meeting Space:</strong> Peer-to-peer collaboration tool</li>
+                        <li><strong>Sync Center:</strong> Mobile device synchronization management</li>
+                        <li><strong>Wireless Networking:</strong> Improved Wi-Fi connectivity and management</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Editions</h2>
+                    <div class="editions-grid">
+                        <div class="edition-card">
+                            <h4>Starter Edition</h4>
+                            <p>Basic edition for emerging markets with limited features.</p>
+                            <ul>
+                                <li>Limited to 3 concurrent applications</li>
+                                <li>No Aero interface</li>
+                                <li>Basic networking features</li>
+                                <li>Available in 32-bit only</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Home Basic</h4>
+                            <p>Entry-level home edition with essential features.</p>
+                            <ul>
+                                <li>Basic Aero interface</li>
+                                <li>Windows Firewall and parental controls</li>
+                                <li>Enhanced search capabilities</li>
+                                <li>Limited networking features</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Home Premium</h4>
+                            <p>Enhanced home edition with multimedia features.</p>
+                            <ul>
+                                <li>Full Aero Glass interface</li>
+                                <li>Windows Media Center</li>
+                                <li>Tablet PC support</li>
+                                <li>Enhanced mobility features</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Business</h4>
+                            <p>Designed for small and medium businesses.</p>
+                            <ul>
+                                <li>Advanced networking features</li>
+                                <li>Domain join capability</li>
+                                <li>Complete backup and restore</li>
+                                <li>Windows Fax and Scan</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Enterprise</h4>
+                            <p>Advanced features for large organizations.</p>
+                            <ul>
+                                <li>All Business features plus:</li>
+                                <li>BitLocker Drive Encryption</li>
+                                <li>Virtual PC Express</li>
+                                <li>Multilingual user interface</li>
+                                <li>UNIX application subsystem</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Ultimate</h4>
+                            <p>Combines all Home Premium and Enterprise features.</p>
+                            <ul>
+                                <li>Complete feature set</li>
+                                <li>Windows BitLocker</li>
+                                <li>Windows Media Center</li>
+                                <li>Additional Ultimate Extras</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>System Requirements</h2>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <h4>Processor</h4>
+                            <p>800 MHz (minimum)</p>
+                            <p>1 GHz for premium editions</p>
+                            <p>32-bit or 64-bit processor</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Memory (RAM)</h4>
+                            <p>512 MB (minimum)</p>
+                            <p>1 GB for premium editions</p>
+                            <p>4 GB maximum for 32-bit</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Graphics</h4>
+                            <p>SVGA (800x600) video adapter</p>
+                                <p>128 MB graphics memory for Aero</p>
+                                <p>DirectX 9.0 support required</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Storage</h4>
+                            <p>15 GB available disk space</p>
+                            <p>40 GB for premium editions</p>
+                            <p>Additional space for features</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Technical Architecture</h2>
+                    <h3>Kernel Improvements</h3>
+                    <ul>
+                        <li><strong>Windows NT 6.0 Kernel:</strong> Complete rewrite of core system components</li>
+                        <li><strong>Enhanced Memory Management:</strong> Improved performance and stability</li>
+                        <li><strong>Service Hardening:</strong> Reduced system attack surface</li>
+                        <li><strong>Kernel Patch Protection:</strong> Prevents kernel-level modifications</li>
+                    </ul>
+
+                    <h3>Graphics Subsystem</h3>
+                    <ul>
+                        <li><strong>Desktop Window Manager (DWM):</strong> Compositing window manager</li>
+                        <li><strong>DirectX 10:</strong> Enhanced graphics and gaming capabilities</li>
+                        <li><strong>Desktop Composition:</strong> Hardware-accelerated graphics</li>
+                        <li><strong>Color Management:</strong> Improved color accuracy and consistency</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Service Packs</h2>
+                    <h3>Service Pack 1 (SP1)</h3>
+                    <p>Released in March 2008, SP1 included:</p>
+                    <ul>
+                        <li>Performance improvements and bug fixes</li>
+                        <li>Enhanced reliability and compatibility</li>
+                        <li>Updated drivers and hardware support</li>
+                        <li>Security enhancements</li>
+                    </ul>
+
+                    <h3>Service Pack 2 (SP2)</h3>
+                    <p>Released in April 2009, SP2 added:</p>
+                    <ul>
+                        <li>Windows Search 4.0</li>
+                        <li>Bluetooth 2.1 support</li>
+                        <li>Windows Vista Feature Pack for Wireless</li>
+                        <li>Additional performance improvements</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Reception and Criticism</h2>
+                    <h3>Positive Aspects</h3>
+                    <ul>
+                        <li><strong>Enhanced Security:</strong> UAC and other security features were innovative</li>
+                        <li><strong>Visual Design:</strong> Aero interface was visually impressive</li>
+                        <li><strong>Search Functionality:</strong> Instant search was a significant improvement</li>
+                        <li><strong>Driver Model:</strong> Improved driver architecture for better stability</li>
+                    </ul>
+
+                    <h3>Criticisms</h3>
+                    <ul>
+                        <li><strong>High System Requirements:</strong> Required significant hardware upgrades</li>
+                        <li><strong>Compatibility Issues:</strong> Many applications and drivers were incompatible</li>
+                        <li><strong>Performance:</strong> Slower than Windows XP on equivalent hardware</li>
+                        <li><strong>UAC Intrusiveness:</strong> User Account Control prompts were frequent and annoying</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Legacy and Impact</h2>
+                    <p>Despite its mixed reception, Windows Vista introduced several technologies that became standard in future Windows versions:</p>
+                    <ul>
+                        <li><strong>User Account Control:</strong> Refined and improved in Windows 7 and later</li>
+                        <li><strong>Aero Interface:</strong> Evolved into the modern Windows UI design language</li>
+                        <li><strong>Search Integration:</strong> Enhanced search capabilities continued in Windows 7</li>
+                        <li><strong>Security Architecture:</strong> Many security improvements persisted in later versions</li>
+                    </ul>
+                    <p>Windows Vista served as a foundation for Windows 7, which addressed many of Vista's criticisms while retaining its technological innovations.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Yunice Jam Matabile | BSIT-S-2A | Windows Server Documentation</p>
+        </footer>
+    </div>
+</body>
+</html>

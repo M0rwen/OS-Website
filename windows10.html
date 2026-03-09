@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 10 - Yunice Jam Matabile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e0d4 50%, #f0e6e8 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #d4c4b0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 300;
+            color: #6b5b73;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-btn {
+            background: none;
+            border: none;
+            font-size: 16px;
+            color: #6b5b73;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #d4c4b0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%;
+            margin-top: 4px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0e6e8;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #6b5b73;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 200;
+            color: #6b5b73;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #6b5b73;
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d4c4b0;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #8b7b83;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        .section p, .section li {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .spec-card {
+            background: #f8f4f0;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #6b5b73;
+        }
+
+        .spec-card h4 {
+            color: #6b5b73;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .spec-card p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .editions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .edition-card {
+            background: #f8f4f0;
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid #6b5b73;
+        }
+
+        .edition-card h4 {
+            color: #6b5b73;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .edition-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .edition-card ul {
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+
+        .edition-card li {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #d4c4b0;
+            color: #8b7b83;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Windows Server</div>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Windows 2008</button>
+                    <div class="dropdown-content">
+                        <a href="windows2008.html">Overview</a>
+                        <a href="windows2008.html#features">Features</a>
+                        <a href="windows2008.html#editions">Editions</a>
+                        <a href="windows2008.html#system-requirements">System Requirements</a>
+                        <a href="windows2008.html#installation">Installation</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Windows Server</button>
+                    <div class="dropdown-content">
+                        <a href="windows95.html">Windows 95</a>
+                        <a href="windows98.html">Windows 98</a>
+                        <a href="windowsme.html">Windows ME</a>
+                        <a href="windows2008.html">Windows 2008</a>
+                        <a href="windowsvista.html">Windows Vista</a>
+                        <a href="windows8.html">Windows 8</a>
+                        <a href="windows10.html">Windows 10</a>
+                        <a href="windows11.html">Windows 11</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <a href="index.html" class="back-link">← Back to Home</a>
+            
+            <h1>Windows 10</h1>
+            
+            <div class="content">
+                <div class="section">
+                    <h2>Overview</h2>
+                    <p>Windows 10, released on July 29, 2015, marked Microsoft's return to form after the controversial Windows 8. Designed as the "last version of Windows," Windows 10 introduced a new service model with continuous updates rather than major releases. The operating system successfully blended the familiar desktop experience with modern touch capabilities, creating a unified platform for all device types.</p>
+                    <p>Built on the Windows NT 10.0 kernel, Windows 10 represented a convergence of desktop, mobile, and gaming experiences, with a focus on productivity, security, and user customization.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Key Features</h2>
+                    <h3>User Interface</h3>
+                    <ul>
+                        <li><strong>Start Menu:</strong> Revamped Start menu combining traditional elements with live tiles</li>
+                        <li><strong>Task View:</strong> Virtual desktops and enhanced window management</li>
+                        <li><strong>Action Center:</strong> Centralized notification center with quick settings</li>
+                        <li><strong>Continuum:</strong> Adaptive interface that switches between desktop and tablet modes</li>
+                    </ul>
+
+                    <h3>Productivity Features</h3>
+                    <ul>
+                        <li><strong>Cortana:</strong> Voice-activated digital assistant</li>
+                        <li><strong>Microsoft Edge:</strong> New web browser with built-in reading and annotation tools</li>
+                        <li><strong>Timeline:</strong> Cross-device activity history and resume capability</li>
+                        <li><strong>Clipboard History:</strong> Enhanced clipboard with multiple item storage</li>
+                    </ul>
+
+                    <h3>Gaming and Entertainment</h3>
+                    <ul>
+                        <li><strong>DirectX 12:</strong> Advanced graphics API for improved gaming performance</li>
+                        <li><strong>Game Mode:</strong> Optimized system resources for gaming</li>
+                        <li><strong>Xbox Integration:</strong> Built-in Xbox app for gaming and streaming</li>
+                        <li><strong>Windows Mixed Reality:</strong> Support for VR and AR experiences</li>
+                    </ul>
+
+                    <h3>Security and Privacy</h3>
+                    <ul>
+                        <li><strong>Windows Hello:</strong> Biometric authentication (fingerprint, face, iris)</li>
+                        <li><strong>Device Guard:</strong> Hardware-based security against advanced threats</li>
+                        <li><strong>Controlled Folder Access:</strong> Ransomware protection</li>
+                        <li><strong>Privacy Dashboard:</strong> Granular control over data collection</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Editions</h2>
+                    <div class="editions-grid">
+                        <div class="edition-card">
+                            <h4>Windows 10 Home</h4>
+                            <p>Standard edition for consumers and home users.</p>
+                            <ul>
+                                <li>Start menu with live tiles</li>
+                                <li>Cortana digital assistant</li>
+                                <li>Microsoft Edge browser</li>
+                                <li>Windows Store access</li>
+                                <li>Basic security features</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Windows 10 Pro</h4>
+                            <p>Enhanced edition for professionals and small businesses.</p>
+                            <ul>
+                                <li>All Home features plus:</li>
+                                <li>BitLocker encryption</li>
+                                <li>Remote Desktop</li>
+                                <li>Hyper-V virtualization</li>
+                                <li>Domain join capability</li>
+                                <li>Group Policy management</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Windows 10 Enterprise</h4>
+                            <p>Advanced edition for large organizations.</p>
+                            <ul>
+                                <li>All Pro features plus:</li>
+                                <li>Windows Defender Advanced Threat Protection</li>
+                                <li>Windows To Go</li>
+                                <li>DirectAccess</li>
+                                <li>BranchCache</li>
+                                <li>AppLocker and device guard</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Windows 10 Education</h4>
+                            <p>Specialized edition for educational institutions.</p>
+                            <ul>
+                                <li>Enterprise features tailored for schools</li>
+                                <li>Windows Defender ATP</li>
+                                <li>Simplified deployment tools</li>
+                                <li>Set up School PCs app</li>
+                                <li>Take a Test mode</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Windows 10 Pro for Workstations</h4>
+                            <p>High-performance edition for power users.</p>
+                            <ul>
+                                <li>All Pro features plus:</li>
+                                <li>Support for server-grade hardware</li>
+                                <li>ReFS file system</li>
+                                <li>Persistent memory support</li>
+                                <li>Faster file sharing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="edition-card">
+                            <h4>Windows 10 IoT Core</h4>
+                            <p>Lightweight edition for IoT devices.</p>
+                            <ul>
+                                <li>Minimal footprint</li>
+                                <li>Headless operation support</li>
+                                <li>UWP app development</li>
+                                <li>Remote management</li>
+                                <li>Security by default</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>System Requirements</h2>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <h4>Processor</h4>
+                            <p>1 GHz or faster processor</p>
+                            <p>64-bit or 32-bit architecture</p>
+                            <p>Supports PAE, NX, and SSE2</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Memory (RAM)</h4>
+                            <p>1 GB for 32-bit</p>
+                            <p>2 GB for 64-bit</p>
+                            <p>4 GB recommended for optimal performance</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Graphics</h4>
+                            <p>DirectX 9 or later graphics device</p>
+                            <p>WDDM 1.0 driver</p>
+                            <p>800x600 minimum resolution</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Storage</h4>
+                            <p>16 GB for 32-bit OS</p>
+                            <p>32 GB for 64-bit OS</p>
+                            <p>Additional space for updates and apps</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Major Updates and Versions</h2>
+                    <h3>Feature Updates</h3>
+                    <ul>
+                        <li><strong>November Update (1511):</strong> First major feature update</li>
+                        <li><strong>Anniversary Update (1607):</strong> Enhanced Cortana, Windows Ink, and security</li>
+                        <li><strong>Creators Update (1703):</strong> 3D creation, Game Mode, and Paint 3D</li>
+                        <li><strong>Fall Creators Update (1709):</strong> Timeline, Fluent Design, and mixed reality</li>
+                        <li><strong>April 2018 Update (1803):</strong> Timeline, Focus Assist, and privacy improvements</li>
+                        <li><strong>October 2018 Update (1809):</strong> Your Phone app, dark theme, and clipboard sync</li>
+                        <li><strong>May 2019 Update (1903):</strong> Light theme, reserved storage, and Kaomoji</li>
+                        <li><strong>November 2019 Update (1909):</strong> Performance and quality improvements</li>
+                        <li><strong>May 2020 Update (2004):</strong> Cloud reset, Cortana redesign, and GPU scheduling</li>
+                        <li><strong>October 2020 Update (20H2):</strong> Start menu improvements and Edge browser</li>
+                        <li><strong>May 2021 Update (21H1):</strong> Business features and security enhancements</li>
+                        <li><strong>November 2021 Update (21H2):</strong> WSLg and other productivity features</li>
+                        <li><strong>2022 Update (22H2):</strong> Focus on productivity and security improvements</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Windows 10 as a Service</h2>
+                    <h3>Update Channels</h3>
+                    <ul>
+                        <li><strong>Windows Insider Program:</strong> Early access to preview builds</li>
+                        <li><strong>Semi-Annual Channel:</strong> Feature updates twice per year</li>
+                        <li><strong>Monthly Quality Updates:</strong> Security and reliability patches</li>
+                        <li><strong>Long-Term Servicing Channel:</strong> Extended support for specific devices</li>
+                    </ul>
+
+                    <h3>Support Lifecycle</h3>
+                    <ul>
+                        <li><strong>Mainstream Support:</strong> 5 years for Home and Pro editions</li>
+                        <li><strong>Extended Support:</strong> Additional 5 years for Enterprise and Education</li>
+                        <li><strong>Semi-Annual Channel:</strong> 18 months of support for feature updates</li>
+                        <li><strong>Long-Term Servicing:</strong> 10 years of support for LTSC editions</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Developer Features</h2>
+                    <h3>Development Tools</h3>
+                    <ul>
+                        <li><strong>Windows Subsystem for Linux (WSL):</strong> Native Linux environment</li>
+                        <li><strong>PowerShell Core:</strong> Cross-platform automation framework</li>
+                        <li><strong>Windows Terminal:</strong> Modern command-line interface</li>
+                        <li><strong>Visual Studio Integration:</strong> Enhanced development environment</li>
+                    </ul>
+
+                    <h3>Application Platforms</h3>
+                    <ul>
+                        <li><strong>Universal Windows Platform (UWP):</strong> Cross-device app development</li>
+                        <li><strong>Windows Desktop Bridge:</strong> Convert desktop apps to Store apps</li>
+                        <li><strong>Progressive Web Apps (PWA):</strong> Web apps with native capabilities</li>
+                        <li><strong>Windows App SDK:</strong> Latest development framework</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Reception and Market Success</h2>
+                    <h3>Positive Reception</h3>
+                    <ul>
+                        <li><strong>User Adoption:</strong> Rapid adoption rate exceeding Windows 7 and 8</li>
+                        <li><strong>Business Adoption:</strong> Strong enterprise acceptance</li>
+                        <li><strong>Developer Support:</strong> Robust development ecosystem</li>
+                        <li><strong>Performance:</strong> Improved performance and efficiency</li>
+                    </ul>
+
+                    <h3>Criticisms</h3>
+                    <ul>
+                        <li><strong>Privacy Concerns:</strong> Data collection and telemetry</li>
+                        <li><strong>Update Issues:</strong> Some problematic feature updates</li>
+                        <li><strong>Bloatware:</strong> Pre-installed applications and games</li>
+                        <li><strong>Forced Updates:</strong> Limited control over update timing</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Legacy and Future</h2>
+                    <p>Windows 10 has been highly successful, becoming the most widely used Windows operating system. Its continuous update model has influenced how Microsoft approaches software development, and many of its features have been carried forward to Windows 11.</p>
+                    <p>Key innovations that continue to influence Windows development include:</p>
+                    <ul>
+                        <li><strong>Windows as a Service:</strong> Continuous improvement model</li>
+                        <li><strong>Cloud Integration:</strong> Deep Microsoft account integration</li>
+                        <li><strong>Security Innovation:</strong> Hardware-based security features</li>
+                        <li><strong>Developer Tools:</strong> Enhanced development environments</li>
+                    </ul>
+                    <p>Windows 10 will continue to receive support until October 14, 2025, after which users will need to upgrade to Windows 11 for continued security updates.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Yunice Jam Matabile | BSIT-S-2A | Windows Server Documentation</p>
+        </footer>
+    </div>
+</body>
+</html>

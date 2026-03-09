@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 95 - Yunice Jam Matabile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e0d4 50%, #f0e6e8 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #d4c4b0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 300;
+            color: #6b5b73;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-btn {
+            background: none;
+            border: none;
+            font-size: 16px;
+            color: #6b5b73;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #d4c4b0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%;
+            margin-top: 4px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0e6e8;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #6b5b73;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 200;
+            color: #6b5b73;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #6b5b73;
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d4c4b0;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #8b7b83;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        .section p, .section li {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .spec-card {
+            background: #f8f4f0;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #6b5b73;
+        }
+
+        .spec-card h4 {
+            color: #6b5b73;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .spec-card p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #d4c4b0;
+            color: #8b7b83;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Windows Server</div>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Windows 2008</button>
+                    <div class="dropdown-content">
+                        <a href="windows2008.html">Overview</a>
+                        <a href="windows2008.html#features">Features</a>
+                        <a href="windows2008.html#editions">Editions</a>
+                        <a href="windows2008.html#system-requirements">System Requirements</a>
+                        <a href="windows2008.html#installation">Installation</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Windows Server</button>
+                    <div class="dropdown-content">
+                        <a href="windows95.html">Windows 95</a>
+                        <a href="windows98.html">Windows 98</a>
+                        <a href="windowsme.html">Windows ME</a>
+                        <a href="windows2008.html">Windows 2008</a>
+                        <a href="windowsvista.html">Windows Vista</a>
+                        <a href="windows8.html">Windows 8</a>
+                        <a href="windows10.html">Windows 10</a>
+                        <a href="windows11.html">Windows 11</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <a href="index.html" class="back-link">← Back to Home</a>
+            
+            <h1>Windows 95</h1>
+            
+            <div class="content">
+                <div class="section">
+                    <h2>Overview</h2>
+                    <p>Windows 95, released on August 24, 1995, was a revolutionary operating system that marked a significant milestone in personal computing. It introduced the iconic Start menu and taskbar, fundamentally changing how users interacted with their computers.</p>
+                    <p>This operating system combined MS-DOS and Windows into a single integrated product, featuring a 32-bit architecture while maintaining compatibility with 16-bit applications. Windows 95 was the first version of Windows to include the Internet Explorer web browser and built-in networking support.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Key Features</h2>
+                    <h3>User Interface Innovations</h3>
+                    <ul>
+                        <li><strong>Start Menu:</strong> Introduced the iconic Start button for easy access to programs and files</li>
+                        <li><strong>Taskbar:</strong> Provided a unified way to manage open applications</li>
+                        <li><strong>Desktop:</strong> Allowed users to place shortcuts and files directly on the desktop</li>
+                        <li><strong>Right-click Context Menu:</strong> Simplified file and folder management</li>
+                    </ul>
+
+                    <h3>Technical Improvements</h3>
+                    <ul>
+                        <li><strong>32-bit Architecture:</strong> Improved performance and memory management</li>
+                        <li><strong>Plug and Play:</strong> Simplified hardware installation and configuration</li>
+                        <li><strong>Long File Names:</strong> Support for filenames up to 255 characters</li>
+                        <li><strong>Preemptive Multitasking:</strong> Better system responsiveness</li>
+                    </ul>
+
+                    <h3>Internet and Networking</h3>
+                    <ul>
+                        <li><strong>Built-in TCP/IP Stack:</strong> Native internet connectivity</li>
+                        <li><strong>Dial-up Networking:</strong> Easy internet connection setup</li>
+                        <li><strong>Internet Explorer:</strong> Included web browser (initially optional)</li>
+                        <li><strong>Network Neighborhood:</strong> Simplified network resource access</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>System Requirements</h2>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <h4>Processor</h4>
+                            <p>386DX or higher processor (486 recommended)</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Memory</h4>
+                            <p>4 MB RAM (8 MB recommended)</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Storage</h4>
+                            <p>35-55 MB hard disk space</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Display</h4>
+                            <p>VGA or higher resolution video adapter</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Historical Impact</h2>
+                    <p>Windows 95 was a commercial phenomenon, with Microsoft spending an unprecedented $300 million on marketing. The launch event included a promotional video featuring the Rolling Stones' "Start Me Up," emphasizing the new Start button feature.</p>
+                    <p>The operating system's success established Microsoft's dominance in the PC market and set the standard for graphical user interfaces that would influence operating systems for decades to come.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Legacy</h2>
+                    <p>Many features introduced in Windows 95 continue to be fundamental parts of modern Windows operating systems, including the Start menu, taskbar, and basic file management paradigms. The operating system's success paved the way for future Windows releases and solidified Microsoft's position in the technology industry.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Yunice Jam Matabile | BSIT-S-2A | Windows Server Documentation</p>
+        </footer>
+    </div>
+</body>
+</html>
