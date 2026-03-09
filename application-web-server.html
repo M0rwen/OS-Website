@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application and Web Server - Yunice Jam Matabile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e0d4 50%, #f0e6e8 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #d4c4b0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 300;
+            color: #6b5b73;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-btn {
+            background: none;
+            border: none;
+            font-size: 16px;
+            color: #6b5b73;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #d4c4b0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%;
+            margin-top: 4px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0e6e8;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #6b5b73;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 200;
+            color: #6b5b73;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #6b5b73;
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d4c4b0;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #8b7b83;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        .section p, .section li {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+        }
+
+        .section ol {
+            margin-left: 20px;
+        }
+
+        .video-section {
+            background: #f8f4f0;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .video-link {
+            display: inline-block;
+            background: #6b5b73;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .video-link:hover {
+            background: #8b7b83;
+        }
+
+        .server-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .server-card {
+            background: #f8f4f0;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #6b5b73;
+        }
+
+        .server-card h4 {
+            color: #6b5b73;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .server-card ol {
+            margin-left: 15px;
+        }
+
+        .server-card li {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .config-steps {
+            background: #e8e0d4;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .config-steps h4 {
+            color: #6b5b73;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .config-steps ol {
+            margin-left: 15px;
+        }
+
+        .config-steps li {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #d4c4b0;
+            color: #8b7b83;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Windows Server</div>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Activities dashboard</button>
+                    <div class="dropdown-content">
+                        <a href="index.html#windows-videos">Installation Videos</a>
+                        <a href="windows2008.html">Windows 2008 Guide</a>
+                        <a href="windows2008.html#features">Features</a>
+                        <a href="windows2008.html#editions">Editions</a>
+                        <a href="windows2008.html#system-requirements">System Requirements</a>
+                        <a href="windows2008.html#installation">Installation</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Windows Server</button>
+                    <div class="dropdown-content">
+                        <a href="windows95.html">Windows 95</a>
+                        <a href="windows98.html">Windows 98</a>
+                        <a href="windowsme.html">Windows ME</a>
+                        <a href="windows2000.html">Windows 2000</a>
+                        <a href="windowsxp.html">Windows XP</a>
+                        <a href="windows2003.html">Windows 2003</a>
+                        <a href="windows2008.html">Windows 2008</a>
+                        <a href="windowsvista.html">Windows Vista</a>
+                        <a href="windows7.html">Windows 7</a>
+                        <a href="windows8.html">Windows 8</a>
+                        <a href="windows10.html">Windows 10</a>
+                        <a href="windows11.html">Windows 11</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <a href="index.html" class="back-link">← Back to Home</a>
+            
+            <h1>Application and Web Server</h1>
+            
+            <div class="content">
+                <div class="section">
+                    <h2>Overview</h2>
+                    <p>Application and Web servers are fundamental components of Windows Server environments that enable hosting and delivery of web applications, services, and content. This guide covers the setup, configuration, and management of web server roles across different Windows Server versions.</p>
+                </div>
+
+                <div class="video-section">
+                    <h3>Video Tutorial</h3>
+                    <p>Watch the complete application and web server configuration tutorial with this comprehensive video guide.</p>
+                    <a href="https://youtu.be/6jtisoMWv4A" target="_blank" class="video-link">Watch Tutorial Video</a>
+                </div>
+
+                <div class="section">
+                    <h2>Web Server Configuration Guide</h2>
+                    
+                    <div class="server-grid">
+                        <div class="server-card">
+                            <h4>IIS (Internet Information Services)</h4>
+                            <ol>
+                                <li><strong>Server Manager:</strong> Open Server Manager dashboard</li>
+                                <li><strong>Add Roles:</strong> Click "Add Roles" and select "Web Server (IIS)"</li>
+                                <li><strong>Role Services:</strong> Choose IIS management tools and services</li>
+                                <li><strong>Install Features:</strong> Select required IIS components</li>
+                                <li><strong>Confirm Installation:</strong> Review and confirm role installation</li>
+                                <li><strong>Restart Services:</strong> Restart IIS services if needed</li>
+                            </ol>
+                        </div>
+
+                        <div class="server-card">
+                            <h4>Application Server Setup</h4>
+                            <ol>
+                                <li><strong>Server Manager:</strong> Access Server Manager console</li>
+                                <li><strong>Add Features:</strong> Install Application Server role</li>
+                                <li><strong>.NET Framework:</strong> Ensure required .NET versions are installed</li>
+                                <li><strong>COM+ Applications:</strong> Configure COM+ application support</li>
+                                <li><strong>Application Pool:</strong> Set up application pools for isolation</li>
+                                <li><strong>Virtual Directories:</strong> Configure virtual directories for applications</li>
+                                <li><strong>Security Settings:</strong> Configure application security policies</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="config-steps">
+                        <h4>Website Configuration Steps</h4>
+                        <ol>
+                            <li><strong>Create Website:</strong> Right-click Sites in IIS Manager, select "Add Website"</li>
+                            <li><strong>Site Information:</strong> Enter site name, physical path, and binding</li>
+                            <li><strong>IP Address:</strong> Configure IP address and port bindings</li>
+                            <li><strong>Host Headers:</strong> Set up host headers for multiple sites</li>
+                            <li><strong>Default Document:</strong> Specify default document (index page)</li>
+                            <li><strong>Logging:</strong> Enable and configure site logging</li>
+                            <li><strong>Permissions:</strong> Set appropriate folder and file permissions</li>
+                            <li><strong>SSL Certificate:</strong> Configure HTTPS if required</li>
+                            <li><strong>Test Site:</strong> Browse to site to verify functionality</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Advanced Configuration</h2>
+                    <h3>Security and Performance</h3>
+                    <ul>
+                        <li><strong>SSL/TLS Configuration:</strong> Set up secure HTTPS connections</li>
+                        <li><strong>Firewall Rules:</strong> Configure Windows Firewall for web traffic</li>
+                        <li><strong>Performance Tuning:</strong> Optimize IIS for better performance</li>
+                        <li><strong>Compression:</strong> Enable HTTP compression for faster loading</li>
+                        <li><strong>Caching:</strong> Configure output caching for improved speed</li>
+                        <li><strong>Request Filtering:</strong> Set up URL and request filtering</li>
+                        <li><strong>IP Restrictions:</strong> Configure IP address and domain restrictions</li>
+                        <li><strong>Authentication Methods:</strong> Set up authentication (Basic, Windows, Anonymous)</li>
+                    </ul>
+
+                    <h3>Monitoring and Maintenance</h3>
+                    <ul>
+                        <li><strong>Performance Monitor:</strong> Use Performance Monitor for server metrics</li>
+                        <li><strong>Event Viewer:</strong> Monitor system and application events</li>
+                        <li><strong>Log Analysis:</strong> Regularly review IIS and system logs</li>
+                        <li><strong>Backup Strategy:</strong> Implement regular configuration backups</li>
+                        <li><strong>Health Monitoring:</strong> Set up server health monitoring</li>
+                        <li><strong>Capacity Planning:</strong> Monitor disk space and resource usage</li>
+                        <li><strong>Update Management:</strong> Keep server updated with latest patches</li>
+                        <li><strong>Documentation:</strong> Maintain configuration documentation</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Troubleshooting Common Issues</h2>
+                    <h3>Connection Problems</h3>
+                    <ul>
+                        <li><strong>Port Conflicts:</strong> Check for conflicting port bindings</li>
+                        <li><strong>Firewall Blocking:</strong> Verify firewall allows HTTP/HTTPS traffic</li>
+                        <li><strong>DNS Resolution:</strong> Check DNS configuration and resolution</li>
+                        <li><strong>SSL Certificate Issues:</strong> Verify certificate validity and binding</li>
+                        <li><strong>Permission Denied:</strong> Check file and folder permissions</li>
+                    </ul>
+
+                    <h3>Performance Issues</h3>
+                    <ul>
+                        <li><strong>High CPU Usage:</strong> Check for inefficient applications or scripts</li>
+                        <li><strong>Memory Leaks:</strong> Monitor for memory leaks in applications</li>
+                        <li><strong>Slow Response:</strong> Check network bandwidth and server load</li>
+                        <li><strong>Database Connections:</strong> Optimize database connection pooling</li>
+                        <li><strong>Cache Issues:</strong> Clear and configure caching properly</li>
+                    </ul>
+
+                    <h3>Application Errors</h3>
+                    <ul>
+                        <li><strong>500 Internal Server Error:</strong> Check application event logs</li>
+                        <li><strong>404 Not Found:</strong> Verify file paths and virtual directories</li>
+                        <li><strong>Authentication Failures:</strong> Check user credentials and permissions</li>
+                        <li><strong>Timeout Errors:</strong> Increase timeout values for long operations</li>
+                        <li><strong>Configuration Errors:</strong> Validate web.config and application settings</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Best Practices</h2>
+                    <h3>Security Best Practices</h3>
+                    <ul>
+                        <li><strong>Regular Updates:</strong> Keep server and applications updated</li>
+                        <li><strong>Strong Authentication:</strong> Use strong authentication methods</li>
+                        <li><strong>Least Privilege:</strong> Run services with minimal required permissions</li>
+                        <li><strong>Regular Backups:</strong> Backup configurations and content regularly</li>
+                        <li><strong>Network Isolation:</strong> Separate development and production networks</li>
+                        <li><strong>Monitoring:</strong> Implement comprehensive logging and monitoring</li>
+                        <li><strong>Documentation:</strong> Maintain detailed configuration documentation</li>
+                    </ul>
+
+                    <h3>Performance Optimization</h3>
+                    <ul>
+                        <li><strong>Load Balancing:</strong> Use multiple servers for load distribution</li>
+                        <li><strong>Content Delivery:</strong> Implement CDN for static content</li>
+                        <li><strong>Database Optimization:</strong> Optimize database queries and connections</li>
+                        <li><strong>Caching Strategy:</strong> Implement multi-level caching</li>
+                        <li><strong>Compression:</strong> Use HTTP and content compression</li>
+                        <li><strong>Resource Monitoring:</strong> Monitor CPU, memory, and disk usage</li>
+                        <li><strong>Regular Maintenance:</strong> Schedule regular server maintenance windows</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Yunice Jam Matabile | BSIT-S-2A | Windows Server Documentation</p>
+        </footer>
+    </div>
+</body>
+</html>
