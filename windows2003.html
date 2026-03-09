@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Server 2003 - Yunice Jam Matabile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e0d4 50%, #f0e6e8 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #d4c4b0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 300;
+            color: #6b5b73;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-btn {
+            background: none;
+            border: none;
+            font-size: 16px;
+            color: #6b5b73;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #d4c4b0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%;
+            margin-top: 4px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0e6e8;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #6b5b73;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 200;
+            color: #6b5b73;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #6b5b73;
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d4c4b0;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #8b7b83;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        .section p, .section li {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .spec-card {
+            background: #f8f4f0;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #6b5b73;
+        }
+
+        .spec-card h4 {
+            color: #6b5b73;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .spec-card p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .video-section {
+            background: #f8f4f0;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .video-link {
+            display: inline-block;
+            background: #6b5b73;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .video-link:hover {
+            background: #8b7b83;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #d4c4b0;
+            color: #8b7b83;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Windows Server</div>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Activities dashboard</button>
+                    <div class="dropdown-content">
+                        <a href="index.html#windows-videos">Installation Videos</a>
+                        <a href="windows2008.html">Windows 2008 Guide</a>
+                        <a href="windows2008.html#features">Features</a>
+                        <a href="windows2008.html#editions">Editions</a>
+                        <a href="windows2008.html#system-requirements">System Requirements</a>
+                        <a href="windows2008.html#installation">Installation</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Windows Server</button>
+                    <div class="dropdown-content">
+                        <a href="windows95.html">Windows 95</a>
+                        <a href="windows98.html">Windows 98</a>
+                        <a href="windowsme.html">Windows ME</a>
+                        <a href="windows2000.html">Windows 2000</a>
+                        <a href="windowsxp.html">Windows XP</a>
+                        <a href="windows2003.html">Windows 2003</a>
+                        <a href="windows2008.html">Windows 2008</a>
+                        <a href="windowsvista.html">Windows Vista</a>
+                        <a href="windows7.html">Windows 7</a>
+                        <a href="windows8.html">Windows 8</a>
+                        <a href="windows10.html">Windows 10</a>
+                        <a href="windows11.html">Windows 11</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <a href="index.html" class="back-link">← Back to Home</a>
+            
+            <h1>Windows Server 2003</h1>
+            
+            <div class="content">
+                <div class="section">
+                    <h2>Overview</h2>
+                    <p>Windows Server 2003, released on April 24, 2003, was a major server operating system that built upon the foundation of Windows 2000 while introducing significant improvements in security, reliability, and manageability. Built on the Windows NT 5.2 kernel, Windows Server 2003 was designed to meet the growing demands of enterprise computing and web services.</p>
+                    <p>Windows Server 2003 represented Microsoft's commitment to providing a robust, secure, and scalable server platform for businesses of all sizes. It introduced numerous security enhancements and administrative tools that made it easier to manage complex network environments.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Key Features</h2>
+                    <h3>Security Enhancements</h3>
+                    <ul>
+                        <li><strong>Security Configuration Wizard:</strong> Automated security hardening based on server roles</li>
+                        <li><strong>Internet Connection Firewall:</strong> Built-in firewall protection for network security</li>
+                        <li><strong>Enhanced IPSec:</strong> Improved network security and VPN capabilities</li>
+                        <li><strong>Restricted Services:</strong> Services disabled by default to reduce attack surface</li>
+                    </ul>
+
+                    <h3>Active Directory Improvements</h3>
+                    <ul>
+                        <li><strong>Forest Trust:</strong> Simplified management of multiple Active Directory forests</li>
+                        <li><strong>Domain Rename:</strong> Ability to rename Active Directory domains</li>
+                        <li><strong>Application Partitions:</strong> Improved directory service organization</li>
+                        <li><strong>Quotas and Limits:</strong> Enhanced directory service management</li>
+                    </ul>
+
+                    <h3>Web Services</h3>
+                    <ul>
+                        <li><strong>IIS 6.0:</strong> Completely rewritten web server with enhanced security</li>
+                        <li><strong>ASP.NET Integration:</strong> Built-in support for .NET web applications</li>
+                        <li><strong>Web Garden Support:</strong> Improved scalability for web applications</li>
+                        <li><strong>HTTP Compression:</strong> Enhanced web performance optimization</li>
+                    </ul>
+
+                    <h3>Management and Administration</h3>
+                    <ul>
+                        <li><strong>Manage Your Server:</strong> Simplified server role management interface</li>
+                        <li><strong>Remote Administration Tools:</strong> Enhanced remote server management</li>
+                        <li><strong>Shadow Copy:</strong> Volume shadow copy service for backup and recovery</li>
+                        <li><strong>Command Line Tools:</strong> Enhanced scripting and automation capabilities</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Editions</h2>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <h4>Web Edition</h4>
+                            <p>Optimized for web hosting and web application deployment with IIS 6.0.</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Standard Edition</h4>
+                            <p>Ideal for small to medium businesses with basic server needs.</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Enterprise Edition</h4>
+                            <p>Designed for large enterprises with complex IT requirements.</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Datacenter Edition</h4>
+                            <p>Ultimate edition for mission-critical applications and large-scale virtualization.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>System Requirements</h2>
+                    <div class="specs-grid">
+                        <div class="spec-card">
+                            <h4>Processor</h4>
+                            <p>133 MHz minimum (550 MHz recommended)</p>
+                            <p>Support for up to 64 processors (Datacenter)</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Memory (RAM)</h4>
+                            <p>128 MB minimum (256 MB recommended)</p>
+                            <p>Up to 512 GB RAM (Datacenter)</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Storage</h4>
+                            <p>1.5 GB available disk space minimum</p>
+                            <p>Additional space for roles and features</p>
+                        </div>
+                        <div class="spec-card">
+                            <h4>Display</h4>
+                            <p>VGA or higher resolution video adapter</p>
+                            <p>Keyboard and mouse for initial setup</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-section">
+                    <h3>Installation Tutorial</h3>
+                    <p>Watch the complete Windows Server 2003 installation process with this comprehensive video guide.</p>
+                    <a href="https://youtu.be/FgpbDft4qDg" target="_blank" class="video-link">Watch Installation Video</a>
+                </div>
+
+                <div class="section">
+                    <h2>Service Packs</h2>
+                    <h3>Service Pack 1 (SP1)</h3>
+                    <p>Released in 2005, SP1 included:</p>
+                    <ul>
+                        <li>Security updates and bug fixes</li>
+                        <li>Enhanced reliability and performance</li>
+                        <li>Updated drivers and hardware support</li>
+                        <li>Improved management tools</li>
+                    </ul>
+
+                    <h3>Service Pack 2 (SP2)</h3>
+                    <p>Released in 2007, SP2 featured:</p>
+                    <ul>
+                        <li>Windows Server 2003 R2 features</li>
+                        <li>Enhanced security capabilities</li>
+                        <li>Improved file and print services</li>
+                        <li>Updated management and monitoring tools</li>
+                    </ul>
+
+                    <h3>Windows Server 2003 R2</h3>
+                    <p>Released in December 2005, R2 added:</p>
+                    <ul>
+                        <li>Branch Office management improvements</li>
+                        <li>Identity and access management enhancements</li>
+                        <li>Storage management improvements</li>
+                        <li>Web application server enhancements</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Technical Innovations</h2>
+                    <h3>IIS 6.0</h3>
+                    <p>The completely rewritten Internet Information Services 6.0 introduced:</p>
+                    <ul>
+                        <li>Worker process isolation for improved reliability</li>
+                        <li>Request processing pipeline for better performance</li>
+                        <li>Enhanced security with reduced attack surface</li>
+                        <li>Improved scalability and management capabilities</li>
+                    </ul>
+
+                    <h3>Volume Shadow Copy Service</h3>
+                    <p>Advanced backup and recovery capabilities including:</p>
+                    <ul>
+                        <li>Point-in-time snapshots of volumes</li>
+                        <li>Consistent backup of open files</li>
+                        <li>Shadow copy for shared folders</li>
+                        <li>Integration with backup applications</li>
+                    </ul>
+
+                    <h3>Windows Server 2003 R2 Features</h3>
+                    <ul>
+                        <li><strong>Active Directory Application Mode (ADAM):</strong> Lightweight directory service</li>
+                        <li><strong>Distributed File System Replication (DFS-R):</strong> Efficient file replication</li>
+                        <li><strong>File Server Resource Manager:</strong> Storage quota and file screening</li>
+                        <li><strong>Identity Integration Feature Pack:</strong> Identity management tools</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Legacy and End of Life</h2>
+                    <p>Windows Server 2003 was highly successful in enterprise environments and remained in widespread use for many years. Mainstream support ended in 2010, with extended support continuing until July 14, 2015. Due to its reliability and familiarity, many organizations continued using it long after support ended.</p>
+                    <p>Windows Server 2003's innovations in security, web services, and management laid the groundwork for future Windows Server releases and established many best practices that continue to influence server administration today.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Yunice Jam Matabile | BSIT-S-2A | Windows Server Documentation</p>
+        </footer>
+    </div>
+</body>
+</html>
