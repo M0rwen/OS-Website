@@ -349,31 +349,47 @@
                 </div>
 
                 <div class="section">
-                    <h2>Step-by-Step Installation Guide</h2>
+                    <h2>Step-by-Step Installation Guide (Virtual Machine)</h2>
                     <h3>Pre-Installation Requirements</h3>
                     <ul>
-                        <li><strong>System Check:</strong> Verify your system meets minimum requirements</li>
-                        <li><strong>Backup Data:</strong> Back up important files and settings</li>
+                        <li><strong>Virtual Machine Software:</strong> VMware Workstation, VirtualBox, or Hyper-V installed</li>
+                        <li><strong>ISO File:</strong> Windows 98 ISO file downloaded and verified</li>
+                        <li><strong>System Resources:</strong> Minimum 256MB RAM, 5GB disk space for VM</li>
                         <li><strong>Product Key:</strong> Have your Windows 98 product key ready</li>
-                        <li><strong>Drivers:</strong> Download necessary drivers for your hardware</li>
-                        <li><strong>Installation Media:</strong> Prepare Windows 98 CD or floppy disks</li>
-                        <li><strong>Startup Disk:</strong> Create Windows 98 startup disk</li>
+                        <li><strong>VM Tools:</strong> Download VMware Tools/VirtualBox Guest Additions</li>
+                        <li><strong>Host System:</strong> Ensure host system has sufficient resources</li>
+                        <li><strong>Floppy Support:</strong> Create virtual floppy disk for startup disk if needed</li>
                     </ul>
 
-                    <h3>Installation Process</h3>
+                    <h3>Virtual Machine Setup</h3>
                     <ol>
-                        <li><strong>Boot from Installation Media:</strong> Insert CD and restart computer</li>
-                        <li><strong>Boot Sequence:</strong> Press appropriate key to boot from CD-ROM</li>
+                        <li><strong>Create New VM:</strong> Open VM software and create new virtual machine</li>
+                        <li><strong>VM Configuration:</strong> Set VM name and location</li>
+                        <li><strong>ISO Selection:</strong> Select Windows 98 ISO file as installation media</li>
+                        <li><strong>Memory Allocation:</strong> Allocate minimum 256MB RAM (512MB recommended)</li>
+                        <li><strong>Virtual Disk:</strong> Create virtual hard disk (5GB minimum)</li>
+                        <li><strong>Network Settings:</strong> Configure network adapter (NAT or Bridged)</li>
+                        <li><strong>Processor Settings:</strong> Allocate 1 virtual CPU core</li>
+                        <li><strong>Display Settings:</strong> Configure virtual graphics adapter</li>
+                        <li><strong>Legacy Mode:</strong> Enable legacy BIOS mode for Windows 98 compatibility</li>
+                        <li><strong>Floppy Drive:</strong> Add virtual floppy drive if needed</li>
+                    </ol>
+
+                    <h3>Windows 98 Installation Process</h3>
+                    <ol>
+                        <li><strong>Start VM:</strong> Power on the virtual machine</li>
+                        <li><strong>Boot from ISO:</strong> VM should automatically boot from ISO file</li>
+                        <li><strong>Boot Sequence:</strong> VM boots from ISO automatically</li>
                         <li><strong>Setup Loading:</strong> Wait for Windows 98 Setup to load</li>
                         <li><strong>Welcome Screen:</strong> Click "Continue" to begin setup</li>
                         <li><strong>Directory Selection:</strong> Choose directory for Windows 98 installation</li>
                         <li><strong>Setup Options:</strong> Choose typical, portable, or custom installation</li>
                         <li><strong>User Information:</strong> Enter your name and organization</li>
                         <li><strong>Product Verification:</strong> Enter Windows 98 product key</li>
-                        <li><strong>System Analysis:</strong> Setup analyzes hardware configuration</li>
-                        <li><strong>Copy Files:</strong> Wait for Windows files to be copied</li>
-                        <li><strong>System Restart:</strong> Computer restarts to continue setup</li>
-                        <li><strong>Hardware Detection:</strong> Windows detects and configures hardware</li>
+                        <li><strong>System Analysis:</strong> Setup analyzes virtual hardware configuration</li>
+                        <li><strong>Copy Files:</strong> Wait for Windows files to be copied to virtual disk</li>
+                        <li><strong>VM Restart:</strong> Virtual machine restarts to continue setup</li>
+                        <li><strong>Hardware Detection:</strong> Windows detects and configures virtual hardware</li>
                         <li><strong>Time Zone Setup:</strong> Configure your time zone settings</li>
                         <li><strong>Final Configuration:</strong> Complete system setup and configuration</li>
                     </ol>
@@ -382,20 +398,35 @@
                     <ol>
                         <li><strong>Desktop Configuration:</strong> Arrange desktop icons and shortcuts</li>
                         <li><strong>Display Settings:</strong> Configure screen resolution and colors</li>
-                        <li><strong>Sound Settings:</strong> Test and configure audio devices</li>
+                        <li><strong>Sound Settings:</strong> Test and configure virtual audio devices</li>
                         <li><strong>Network Setup:</strong> Set up internet and network connections</li>
-                        <li><strong>Printer Setup:</strong> Install and configure printers</li>
-                        <li><strong>Driver Installation:</strong> Install necessary hardware drivers</li>
+                        <li><strong>VM Tools Installation:</strong> Install VMware Tools or VirtualBox Guest Additions</li>
+                        <li><strong>Printer Setup:</strong> Install and configure virtual printers</li>
+                        <li><strong>Driver Updates:</strong> Install VM-specific drivers for better performance</li>
                         <li><strong>Antivirus Setup:</strong> Install antivirus protection</li>
                     </ol>
 
+                    <h3>Virtual Machine Optimization</h3>
+                    <ul>
+                        <li><strong>VM Tools:</strong> Essential for graphics, mouse, and performance</li>
+                        <li><strong>Shared Folders:</strong> Configure shared folders between host and guest</li>
+                        <li><strong>Clipboard Sharing:</strong> Enable clipboard sharing between systems</li>
+                        <li><strong>Display Settings:</strong> Adjust virtual display resolution and colors</li>
+                        <li><strong>Performance Tuning:</strong> Optimize VM settings for better performance</li>
+                        <li><strong>Snapshot Management:</strong> Create snapshots before making changes</li>
+                        <li><strong>Resource Allocation:</strong> Adjust CPU and memory as needed</li>
+                        <li><strong>Compatibility Mode:</strong> Use compatibility settings for older applications</li>
+                    </ul>
+
                     <h3>Important Tips</h3>
                     <ul>
-                        <li><strong>Internet Connection:</strong> Ensure stable internet during installation</li>
-                        <li><strong>Power Supply:</strong> Use reliable power source to prevent interruptions</li>
-                        <li><strong>Time Investment:</strong> Allow 1-2 hours for complete installation</li>
-                        <li><strong>Patience:</strong> Don't interrupt installation process once started</li>
-                        <li><strong>Startup Disk:</strong> Keep startup disk for troubleshooting</li>
+                        <li><strong>Host Resources:</strong> Ensure host system has sufficient resources</li>
+                        <li><strong>VM Snapshots:</strong> Create snapshots before major changes</li>
+                        <li><strong>VM Tools:</strong> Always install VM tools for best experience</li>
+                        <li><strong>Network Configuration:</strong> Test network connectivity in VM</li>
+                        <li><strong>Storage Management:</strong> Monitor virtual disk space usage</li>
+                        <li><strong>Backup Strategy:</strong> Back up VM files regularly</li>
+                        <li><strong>Startup Disk:</strong> Keep virtual startup disk for troubleshooting</li>
                         <li><strong>Driver Updates:</strong> Update drivers after installation</li>
                     </ul>
                 </div>
