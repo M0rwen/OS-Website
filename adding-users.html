@@ -4,245 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adding Users - Yunice Jam Matabile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e0d4 50%, #f0e6e8 100%);
-            min-height: 100vh;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #d4c4b0;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 300;
-            color: #6b5b73;
-        }
-
-        nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-btn {
-            background: none;
-            border: none;
-            font-size: 16px;
-            color: #6b5b73;
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .dropdown-btn:hover {
-            background-color: #d4c4b0;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            z-index: 1;
-            border-radius: 4px;
-            top: 100%;
-            margin-top: 4px;
-        }
-
-        .dropdown-content a {
-            color: #333;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            transition: background-color 0.3s;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0e6e8;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        main {
-            padding: 40px 0;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #6b5b73;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        h1 {
-            font-size: 42px;
-            font-weight: 200;
-            color: #6b5b73;
-            margin-bottom: 30px;
-        }
-
-        .content {
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            color: #6b5b73;
-            font-size: 28px;
-            font-weight: 300;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #d4c4b0;
-            padding-bottom: 10px;
-        }
-
-        .section h3 {
-            color: #8b7b83;
-            font-size: 20px;
-            font-weight: 400;
-            margin-bottom: 15px;
-            margin-top: 25px;
-        }
-
-        .section p, .section li {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .section ul {
-            margin-left: 20px;
-        }
-
-        .section ol {
-            margin-left: 20px;
-        }
-
-        .video-section {
-            background: #f8f4f0;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .video-link {
-            display: inline-block;
-            background: #6b5b73;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            margin-top: 15px;
-            transition: background-color 0.3s;
-        }
-
-        .video-link:hover {
-            background: #8b7b83;
-        }
-
-        .step-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .step-card {
-            background: #f8f4f0;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #6b5b73;
-        }
-
-        .step-card h4 {
-            color: #6b5b73;
-            margin-bottom: 15px;
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .step-card ol {
-            margin-left: 15px;
-        }
-
-        .step-card li {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .tip-box {
-            background: #e8e0d4;
-            padding: 20px;
-            border-radius: 6px;
-            margin-top: 20px;
-            border-left: 4px solid #8b7b83;
-        }
-
-        .tip-box h4 {
-            color: #8b7b83;
-            margin-bottom: 15px;
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .tip-box ul {
-            margin-left: 15px;
-        }
-
-        .tip-box li {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid #d4c4b0;
-            color: #8b7b83;
-            font-size: 14px;
-            margin-top: 60px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -250,18 +12,7 @@
             <div class="logo">Windows Server</div>
             <nav>
                 <div class="dropdown">
-                    <button class="dropdown-btn">Activities dashboard</button>
-                    <div class="dropdown-content">
-                        <a href="index.html#windows-videos">Installation Videos</a>
-                        <a href="windows2008.html">Windows 2008 Guide</a>
-                        <a href="windows2008.html#features">Features</a>
-                        <a href="windows2008.html#editions">Editions</a>
-                        <a href="windows2008.html#system-requirements">System Requirements</a>
-                        <a href="windows2008.html#installation">Installation</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropdown-btn">Windows Server</button>
+                    <button class="dropdown-btn">Windows Installation</button>
                     <div class="dropdown-content">
                         <a href="windows95.html">Windows 95</a>
                         <a href="windows98.html">Windows 98</a>
@@ -277,6 +28,15 @@
                         <a href="windows11.html">Windows 11</a>
                     </div>
                 </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Activities</button>
+                    <div class="dropdown-content">
+                        <a href="adding-users.html">Adding Users</a>
+                        <a href="application-web-server.html">Application and Web Server</a>
+                        <a href="gpo-configuration.html">GPO Configuration</a>
+                        <a href="index.html#windows-videos">Installation Videos</a>
+                    </div>
+                </div>
             </nav>
         </header>
 
@@ -288,106 +48,129 @@
             <div class="content">
                 <div class="section">
                     <h2>Overview</h2>
-                    <p>Adding users to Windows operating systems is a fundamental administrative task that allows multiple people to share a single computer while maintaining individual profiles, settings, and privacy. This guide covers the process of creating and managing user accounts across different Windows versions.</p>
+                    <p>User management is a fundamental aspect of Windows Server administration. This comprehensive guide covers creating and managing user accounts across different Windows versions, with step-by-step instructions for both local and domain environments.</p>
                 </div>
 
                 <div class="video-section">
                     <h3>Video Tutorial</h3>
                     <p>Watch the complete user management tutorial with this comprehensive video guide.</p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/kTFLmlhHAqI" allowfullscreen></iframe>
+                    </div>
                     <a href="https://youtu.be/kTFLmlhHAqI" target="_blank" class="video-link">Watch Tutorial Video</a>
                 </div>
 
                 <div class="section">
-                    <h2>Step-by-Step User Management Guide</h2>
+                    <h2>User Management Guide</h2>
                     
-                    <div class="step-grid">
-                        <div class="step-card">
-                            <h4>Windows 95/98/ME</h4>
+                    <div class="features">
+                        <div class="feature-card">
+                            <h4>Windows 7 & 8</h4>
                             <ol>
-                                <li><strong>Control Panel:</strong> Open Control Panel from Start Menu</li>
-                                <li><strong>Users Icon:</strong> Double-click "Users" or "Passwords" icon</li>
-                                <li><strong>Add New User:</strong> Click "Add User" button</li>
-                                <li><strong>User Details:</strong> Enter username and password</li>
-                                <li><strong>Confirm Password:</strong> Re-enter password for confirmation</li>
-                                <li><strong>User Type:</strong> Select user privileges (Standard/Restricted)</li>
-                                <li><strong>Personal Settings:</strong> Configure personal folders and settings</li>
-                                <li><strong>Complete Setup:</strong> Click OK to create user account</li>
+                                <li><strong>Control Panel:</strong> Open Control Panel > User Accounts</li>
+                                <li><strong>Add User:</strong> Click "Manage another account" > "Add a new user"</li>
+                                <li><strong>User Type:</strong> Choose Standard or Administrator account</li>
+                                <li><strong>Create Account:</strong> Enter username and password</li>
+                                <li><strong>Account Settings:</strong> Configure password and security settings</li>
                             </ol>
                         </div>
 
-                        <div class="step-card">
-                            <h4>Windows 2000/XP/2003</h4>
+                        <div class="feature-card">
+                            <h4>Windows 10 & 11</h4>
                             <ol>
-                                <li><strong>Administrative Tools:</strong> Right-click My Computer, select Manage</li>
-                                <li><strong>Local Users:</strong> Expand "Local Users and Groups"</li>
-                                <li><strong>New User:</strong> Right-click in white space, select "New User"</li>
-                                <li><strong>User Information:</strong> Fill in username, full name, description</li>
-                                <li><strong>Password Setup:</strong> Enter and confirm password</li>
-                                <li><strong>Group Membership:</strong> Add to appropriate user groups</li>
-                                <li><strong>Profile Settings:</strong> Configure user profile path and settings</li>
-                                <li><strong>Account Properties:</strong> Set account policies and restrictions</li>
+                                <li><strong>Settings:</strong> Open Settings > Accounts > Family & other users</li>
+                                <li><strong>Add Family Member:</strong> Click "Add a family member" for Microsoft accounts</li>
+                                <li><strong>Add Local User:</strong> Click "Add someone else to this PC"</li>
+                                <li><strong>Account Creation:</strong> Choose Microsoft account or local account</li>
+                                <li><strong>Permissions:</strong> Set account type and permissions</li>
                             </ol>
                         </div>
 
-                        <div class="step-card">
-                            <h4>Windows Vista/7/8/10/11</h4>
+                        <div class="feature-card">
+                            <h4>Windows Server 2003</h4>
                             <ol>
-                                <li><strong>Control Panel:</strong> Open Control Panel from Start Menu</li>
-                                <li><strong>User Accounts:</strong> Click "Add or remove user accounts"</li>
-                                <li><strong>Add New User:</strong> Click "Add a new user"</li>
-                                <li><strong>Microsoft Account:</strong> Choose Microsoft account or local account</li>
-                                <li><strong>User Information:</strong> Enter name, email, password</li>
-                                <li><strong>Security Questions:</strong> Set up security questions (optional)</li>
-                                <li><strong>Account Type:</strong> Select Standard or Administrator</li>
-                                <li><strong>Family Safety:</strong> Configure parental controls if needed</li>
-                                <li><strong>Complete Setup:</strong> Click Next to create account</li>
+                                <li><strong>Computer Management:</strong> Right-click Computer > Manage</li>
+                                <li><strong>Local Users:</strong> Expand Local Users and Groups</li>
+                                <li><strong>New User:</strong> Right-click Users folder > New User</li>
+                                <li><strong>User Details:</strong> Enter username, password, and description</li>
+                                <li><strong>Account Options:</strong> Configure password policies and account settings</li>
+                            </ol>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4>Windows Server 2008+</h4>
+                            <ol>
+                                <li><strong>Server Manager:</strong> Open Server Manager</li>
+                                <li><strong>Configuration:</strong> Navigate to Configuration > Local Users and Groups</li>
+                                <li><strong>User Creation:</strong> Right-click Users folder > New User</li>
+                                <li><strong>Advanced Settings:</strong> Configure user properties and group membership</li>
+                                <li><strong>Group Assignment:</strong> Add user to appropriate security groups</li>
                             </ol>
                         </div>
                     </div>
+                </div>
 
-                    <div class="tip-box">
-                        <h4>Important Tips</h4>
-                        <ul>
-                            <li><strong>Strong Passwords:</strong> Use complex passwords with letters, numbers, symbols</li>
-                            <li><strong>Administrator Rights:</strong> Limit administrator accounts to necessary users only</li>
-                            <li><strong>Regular Backups:</strong> Back up user profiles and important data</li>
-                            <li><strong>Group Policies:</strong> Use Group Policy for enterprise user management</li>
-                            <li><strong>Password Expiration:</strong> Set password expiration policies for security</li>
-                            <li><strong>Account Lockout:</strong> Configure account lockout after failed attempts</li>
-                            <li><strong>User Profiles:</strong> Use roaming profiles for multiple computer access</li>
-                            <li><strong>Audit Logging:</strong> Enable user account access logging for security</li>
-                        </ul>
-                    </div>
+                <div class="section">
+                    <h2>Advanced User Management</h2>
+                    <h3>Group Membership</h3>
+                    <ul>
+                        <li><strong>Administrators:</strong> Full system control and permissions</li>
+                        <li><strong>Users:</strong> Standard user access with limited permissions</li>
+                        <li><strong>Power Users:</strong> Elevated permissions for specific tasks</li>
+                        <li><strong>Remote Desktop Users:</strong> Remote access permissions</li>
+                        <li><strong>Backup Operators:</strong> Backup and restore permissions</li>
+                    </ul>
 
-                    <div class="section">
-                        <h2>User Management Best Practices</h2>
-                        <h3>Security Considerations</h3>
-                        <ul>
-                            <li><strong>Principle of Least Privilege:</strong> Give users only necessary permissions</li>
-                            <li><strong>Regular Password Changes:</strong> Require periodic password updates</li>
-                            <li><strong>Account Disabling:</strong> Disable unused accounts immediately</li>
-                            <li><strong>Two-Factor Authentication:</strong> Use additional security where possible</li>
-                            <li><strong>Shared Folder Security:</strong> Secure shared resources with proper permissions</li>
-                        </ul>
+                    <h3>User Properties Configuration</h3>
+                    <ul>
+                        <li><strong>Profile Path:</strong> Set roaming profile locations</li>
+                        <li><strong>Home Directory:</strong> Configure user home folders</li>
+                        <li><strong>Login Scripts:</strong> Assign scripts for user login</li>
+                        <li><strong>Account Policies:</strong> Set password and lockout policies</li>
+                        <li><strong>Security Settings:</strong> Configure user-specific permissions</li>
+                    </ul>
+                </div>
 
-                        <h3>Organizational Strategies</h3>
-                        <ul>
-                            <li><strong>Naming Conventions:</strong> Use consistent username formats</li>
-                            <li><strong>Group Organization:</strong> Group users by department or function</li>
-                            <li><strong>Documentation:</strong> Maintain user account documentation</li>
-                            <li><strong>Access Reviews:</strong> Regularly review user access and permissions</li>
-                            <li><strong>Template Usage:</strong> Use user templates for consistent setup</li>
-                        </ul>
+                <div class="section">
+                    <h2>Best Practices</h2>
+                    <h3>Security Considerations</h3>
+                    <ul>
+                        <li><strong>Strong Passwords:</strong> Enforce complex password requirements</li>
+                        <li><strong>Least Privilege:</strong> Grant minimum necessary permissions</li>
+                        <li><strong>Regular Audits:</strong> Review user accounts and permissions regularly</li>
+                        <li><strong>Account Lockout:</strong> Implement account lockout policies</li>
+                        <li><strong>Multi-Factor Authentication:</strong> Use MFA when available</li>
+                    </ul>
 
-                        <h3>Troubleshooting Common Issues</h3>
-                        <ul>
-                            <li><strong>Forgotten Passwords:</strong> Use administrator account to reset passwords</li>
-                            <li><strong>Profile Corruption:</strong> Delete and recreate corrupted user profiles</li>
-                            <li><strong>Permission Denied:</strong> Check file/folder permissions and ownership</li>
-                            <li><strong>Logon Issues:</strong> Verify domain connectivity and credentials</li>
-                            <li><strong>Group Policy Conflicts:</strong> Review conflicting group policy settings</li>
-                        </ul>
-                    </div>
+                    <h3>Account Management</h3>
+                    <ul>
+                        <li><strong>Naming Conventions:</strong> Use consistent username formats</li>
+                        <li><strong>Documentation:</strong> Maintain user account documentation</li>
+                        <li><strong>Disabled Accounts:</strong> Disable inactive accounts instead of deleting</li>
+                        <li><strong>Backup Strategies:</strong> Regular backup of user account data</li>
+                        <li><strong>Access Reviews:</strong> Periodic review of user access rights</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Troubleshooting Common Issues</h2>
+                    <h3>Login Problems</h3>
+                    <ul>
+                        <li><strong>Incorrect Password:</strong> Verify password and reset if necessary</li>
+                        <li><strong>Account Locked:</strong> Check account lockout policies and unlock</li>
+                        <li><strong>Expired Password:</strong> Update password according to policy</li>
+                        <li><strong>Profile Issues:</strong> Check user profile and permissions</li>
+                        <li><strong>Network Problems:</strong> Verify network connectivity for domain accounts</li>
+                    </ul>
+
+                    <h3>Permission Issues</h3>
+                    <ul>
+                        <li><strong>Access Denied:</strong> Check user group membership and permissions</li>
+                        <li><strong>File Access:</strong> Verify NTFS permissions and share rights</li>
+                        <li><strong>Application Issues:</strong> Check application-specific permissions</li>
+                        <li><strong>Registry Access:</strong> Verify registry permissions if needed</li>
+                        <li><strong>Service Access:</strong> Check service permissions and dependencies</li>
+                    </ul>
                 </div>
             </div>
         </main>
