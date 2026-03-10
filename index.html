@@ -12,10 +12,10 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e0d4 50%, #f0e6e8 100%);
+            font-family: 'Lucida Sans', 'Georgia', sans-serif;
+            background: linear-gradient(135deg, #FBF5E5 0%, #C890A7 50%, #A35C7A 100%);
             min-height: 100vh;
-            color: #333;
+            color: #212121;
         }
 
         .container {
@@ -29,13 +29,13 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
-            border-bottom: 1px solid #d4c4b0;
+            border-bottom: 1px solid #A35C7A;
         }
 
         .logo {
             font-size: 24px;
             font-weight: 300;
-            color: #6b5b73;
+            color: #212121;
         }
 
         nav {
@@ -51,7 +51,7 @@
             background: none;
             border: none;
             font-size: 16px;
-            color: #6b5b73;
+            color: #212121;
             cursor: pointer;
             padding: 8px 12px;
             border-radius: 4px;
@@ -59,7 +59,7 @@
         }
 
         .dropdown-btn:hover {
-            background-color: #d4c4b0;
+            background-color: #A35C7A;
         }
 
         .dropdown-content {
@@ -83,7 +83,7 @@
         }
 
         .dropdown-content a:hover {
-            background-color: #f0e6e8;
+            background-color: #C890A7;
         }
 
         .dropdown:hover .dropdown-content {
@@ -101,16 +101,16 @@
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 42px;
             font-weight: 200;
-            color: #6b5b73;
+            color: #212121;
             margin-bottom: 20px;
             line-height: 1.2;
         }
 
         .section {
             font-size: 20px;
-            color: #8b7b83;
+            color: #212121;
             margin-bottom: 40px;
             font-weight: 300;
         }
@@ -118,7 +118,7 @@
         .intro {
             font-size: 18px;
             line-height: 1.6;
-            color: #666;
+            color: #212121;
             margin-bottom: 40px;
             max-width: 600px;
             margin-left: auto;
@@ -133,35 +133,38 @@
         }
 
         .feature-card {
-            background: #fff;
+            background: #FBF5E5;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: left;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .feature-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         }
 
         .feature-card h3 {
-            color: #6b5b73;
+            color: #212121;
             margin-bottom: 15px;
-            font-weight: 400;
+            font-size: 18px;
+            font-weight: 500;
         }
 
         .feature-card p {
-            color: #666;
+            color: #212121;
             line-height: 1.5;
         }
 
         footer {
             text-align: center;
             padding: 40px 0;
-            border-top: 1px solid #d4c4b0;
-            color: #8b7b83;
+            border-top: 1px solid #A35C7A;
+            color: #212121;
             font-size: 14px;
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -229,59 +232,115 @@
             </div>
 
             <div id="windows-videos" style="margin-top: 60px;">
-                <h2 style="text-align: center; color: #6b5b73; margin-bottom: 40px; font-size: 32px; font-weight: 200;">Windows Installation Videos</h2>
+                <h2 style="text-align: center; color: #212121; margin-bottom: 40px; font-size: 32px; font-weight: 200;">Windows Installation Videos</h2>
                 <div class="features">
                     <div class="feature-card">
                         <h3>Windows Server 2008</h3>
-                        <p><a href="https://youtu.be/OLXakLKYT5M" target="_blank" style="color: #6b5b73; text-decoration: none;">Watch Installation Tutorial →</a></p>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/OLXakLKYT5M" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/OLXakLKYT5M" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                     <div class="feature-card">
                         <h3>Windows Server 2003</h3>
-                        <p><a href="https://youtu.be/FgpbDft4qDg" target="_blank" style="color: #6b5b73; text-decoration: none;">Watch Installation Tutorial →</a></p>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/FgpbDft4qDg" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/FgpbDft4qDg" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                     <div class="feature-card">
                         <h3>Windows 2000</h3>
-                        <p><a href="https://youtu.be/B6lN_PbSYMY" target="_blank" style="color: #6b5b73; text-decoration: none;">Watch Installation Tutorial →</a></p>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/B6lN_PbSYMY" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/B6lN_PbSYMY" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                     <div class="feature-card">
                         <h3>Windows 98</h3>
-                        <p><a href="https://youtu.be/kMtqhhet1t8" target="_blank" style="color: #6b5b73; text-decoration: none;">Watch Installation Tutorial →</a></p>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/kMtqhhet1t8" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/kMtqhhet1t8" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                     <div class="feature-card">
                         <h3>Windows 8</h3>
-                        <p><a href="https://youtu.be/ecz_OUZptDE" target="_blank" style="color: #6b5b73; text-decoration: none;">Watch Installation Tutorial →</a></p>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/ecz_OUZptDE" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/ecz_OUZptDE" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                     <div class="feature-card">
                         <h3>Windows 7</h3>
-                        <p><a href="https://youtu.be/zWrbYetasxY" target="_blank" style="color: #6b5b73; text-decoration: none;">Watch Installation Tutorial →</a></p>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/zWrbYetasxY" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/zWrbYetasxY" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                     <div class="feature-card">
                         <h3>Windows XP</h3>
-                        <p><a href="https://youtu.be/bFNGz5PJB-k" target="_blank" style="color: #6b5b73; text-decoration: none;">Watch Installation Tutorial →</a></p>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/bFNGz5PJB-k" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/bFNGz5PJB-k" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                     <div class="feature-card">
                         <h3>Adding Users</h3>
-                        <p><a href="https://youtu.be/kTFLmlhHAqI" target="_blank" style="color: #6b5b73; text-decoration: none;">Watch Tutorial →</a></p>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/kTFLmlhHAqI" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/kTFLmlhHAqI" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                     <div class="feature-card">
                         <h3>Application and Web Server</h3>
-                        <p><a href="https://youtu.be/6jtisoMWv4A" target="_blank" style="color: #6b5b73; text-decoration: none;">Watch Tutorial →</a></p>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/6jtisoMWv4A" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/6jtisoMWv4A" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                     <div class="feature-card">
                         <h3>GPO Configuration</h3>
-                        <p><a href="https://youtu.be/No4VYTaY4ko" target="_blank" style="color: #6b5b73; text-decoration: none;">Watch Tutorial →</a></p>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/No4VYTaY4ko" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/No4VYTaY4ko" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                     <div class="feature-card">
-                        <h3>Adding Users Guide</h3>
-                        <p><a href="adding-users.html" style="color: #6b5b73; text-decoration: none;">Step-by-Step Guide →</a></p>
+                        <h3>Activity 2</h3>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/88oD_THHfXo" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/88oD_THHfXo" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                     <div class="feature-card">
-                        <h3>Application Server Guide</h3>
-                        <p><a href="application-web-server.html" style="color: #6b5b73; text-decoration: none;">Step-by-Step Guide →</a></p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>GPO Configuration Guide</h3>
-                        <p><a href="gpo-configuration.html" style="color: #6b5b73; text-decoration: none;">Step-by-Step Guide →</a></p>
+                        <h3>Activity 3</h3>
+                        <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 15px;">
+                            <iframe src="https://www.youtube.com/embed/jHyikf1OZU8" 
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;"
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p><a href="https://youtu.be/jHyikf1OZU8" target="_blank" style="color: #212121; text-decoration: none;">Open in YouTube →</a></p>
                     </div>
                 </div>
             </div>
