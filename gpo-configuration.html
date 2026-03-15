@@ -3,245 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPO Configuration - Yunice Jam Matabile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e0d4 50%, #f0e6e8 100%);
-            min-height: 100vh;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #d4c4b0;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 300;
-            color: #6b5b73;
-        }
-
-        nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-btn {
-            background: none;
-            border: none;
-            font-size: 16px;
-            color: #6b5b73;
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .dropdown-btn:hover {
-            background-color: #d4c4b0;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            z-index: 1;
-            border-radius: 4px;
-            top: 100%;
-            margin-top: 4px;
-        }
-
-        .dropdown-content a {
-            color: #333;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            transition: background-color 0.3s;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0e6e8;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        main {
-            padding: 40px 0;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #6b5b73;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        h1 {
-            font-size: 42px;
-            font-weight: 200;
-            color: #6b5b73;
-            margin-bottom: 30px;
-        }
-
-        .content {
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            color: #6b5b73;
-            font-size: 28px;
-            font-weight: 300;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #d4c4b0;
-            padding-bottom: 10px;
-        }
-
-        .section h3 {
-            color: #8b7b83;
-            font-size: 20px;
-            font-weight: 400;
-            margin-bottom: 15px;
-            margin-top: 25px;
-        }
-
-        .section p, .section li {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .section ul {
-            margin-left: 20px;
-        }
-
-        .section ol {
-            margin-left: 20px;
-        }
-
-        .video-section {
-            background: #f8f4f0;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .video-link {
-            display: inline-block;
-            background: #6b5b73;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            margin-top: 15px;
-            transition: background-color 0.3s;
-        }
-
-        .video-link:hover {
-            background: #8b7b83;
-        }
-
-        .gpo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .gpo-card {
-            background: #f8f4f0;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #6b5b73;
-        }
-
-        .gpo-card h4 {
-            color: #6b5b73;
-            margin-bottom: 15px;
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .gpo-card ol {
-            margin-left: 15px;
-        }
-
-        .gpo-card li {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .policy-types {
-            background: #e8e0d4;
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-
-        .policy-types h4 {
-            color: #6b5b73;
-            margin-bottom: 15px;
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .policy-types ul {
-            margin-left: 15px;
-        }
-
-        .policy-types li {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid #d4c4b0;
-            color: #8b7b83;
-            font-size: 14px;
-            margin-top: 60px;
-        }
-    </style>
+    <title>Activity 7: GPO Configuration - Yunice Jam Matabile</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -249,18 +12,7 @@
             <div class="logo">Windows Server</div>
             <nav>
                 <div class="dropdown">
-                    <button class="dropdown-btn">Activities dashboard</button>
-                    <div class="dropdown-content">
-                        <a href="index.html#windows-videos">Installation Videos</a>
-                        <a href="windows2008.html">Windows 2008 Guide</a>
-                        <a href="windows2008.html#features">Features</a>
-                        <a href="windows2008.html#editions">Editions</a>
-                        <a href="windows2008.html#system-requirements">System Requirements</a>
-                        <a href="windows2008.html#installation">Installation</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropdown-btn">Windows Server</button>
+                    <button class="dropdown-btn">Windows Installation</button>
                     <div class="dropdown-content">
                         <a href="windows95.html">Windows 95</a>
                         <a href="windows98.html">Windows 98</a>
@@ -276,151 +28,172 @@
                         <a href="windows11.html">Windows 11</a>
                     </div>
                 </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Activities</button>
+                    <div class="dropdown-content dropdown-mega">
+                        <a href="adding-users.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/88oD_THHfXo/hqdefault.jpg" alt="Activity 1: Adding Users">
+                            <span>Activity 1: Adding Users</span>
+                        </a>
+                        <a href="dhcp-role.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/jHyikf1OZU8/hqdefault.jpg" alt="Activity 2: DHCP Role">
+                            <span>Activity 2: DHCP Role</span>
+                        </a>
+                        <a href="domain.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/6jtisoMWv4A/hqdefault.jpg" alt="Activity 3: Domain">
+                            <span>Activity 3: Domain</span>
+                        </a>
+                        <a href="raid-installations.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/8HVN7xkL8aM/hqdefault.jpg" alt="Activity 4: RAID Installations">
+                            <span>Activity 4: RAID Installations</span>
+                        </a>
+                        <a href="web-services.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/xfDRo3sbqsc/hqdefault.jpg" alt="Activity 5: Web Services">
+                            <span>Activity 5: Web Services</span>
+                        </a>
+                        <a href="file-services.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/NQ6gLblRtVw/hqdefault.jpg" alt="Activity 6: File Services">
+                            <span>Activity 6: File Services</span>
+                        </a>
+                        <a href="gpo-configuration.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/No4VYTaY4ko/hqdefault.jpg" alt="Activity 7: GPO Configuration">
+                            <span>Activity 7: GPO Configuration</span>
+                        </a>
+                    </div>
+                </div>
             </nav>
         </header>
 
         <main>
             <a href="index.html" class="back-link">← Back to Home</a>
             
-            <h1>GPO Configuration</h1>
+            <h1>Activity 7: GPO Configuration</h1>
             
             <div class="content">
                 <div class="section">
                     <h2>Overview</h2>
-                    <p>Group Policy Objects (GPO) are powerful administrative tools in Windows Server environments that allow centralized management of user settings, security policies, and computer configurations across entire organizations. This guide covers GPO creation, configuration, and best practices for Windows Server administration.</p>
+                    <p>User management is a fundamental aspect of Windows Server administration. This comprehensive guide covers creating and managing user accounts across different Windows versions, with step-by-step instructions for both local and domain environments.</p>
                 </div>
 
                 <div class="video-section">
                     <h3>Video Tutorial</h3>
-                    <p>Watch the complete GPO configuration tutorial with this comprehensive video guide.</p>
+                    <p>Watch the complete user management tutorial with this comprehensive video guide.</p>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/No4VYTaY4ko" allowfullscreen></iframe>
+                    </div>
                     <a href="https://youtu.be/No4VYTaY4ko" target="_blank" class="video-link">Watch Tutorial Video</a>
                 </div>
 
                 <div class="section">
-                    <h2>Group Policy Management Guide</h2>
+                    <h2>User Management Guide</h2>
                     
-                    <div class="gpo-grid">
-                        <div class="gpo-card">
-                            <h4>Creating Group Policies</h4>
+                    <div class="features">
+                        <div class="feature-card">
+                            <h4>Windows 7 & 8</h4>
                             <ol>
-                                <li><strong>Group Policy Management:</strong> Open Group Policy Management Console (gpmc.msc)</li>
-                                <li><strong>Create GPO:</strong> Right-click domain or OU, select "Create GPO"</li>
-                                <li><strong>GPO Naming:</strong> Use descriptive naming convention for policies</li>
-                                <li><strong>Edit Policy:</strong> Double-click GPO to open Group Policy Editor</li>
-                                <li><strong>Configuration:</strong> Navigate through policy settings to configure</li>
-                                <li><strong>Link Policy:</strong> Link GPO to domain, site, or OU</li>
-                                <li><strong>Security Filtering:</strong> Configure security group filtering if needed</li>
-                                <li><strong>WMI Filtering:</strong> Set up WMI filtering for targeted application</li>
-                                <li><strong>Enforcement:</strong> Configure policy enforcement settings</li>
+                                <li><strong>Control Panel:</strong> Open Control Panel > User Accounts</li>
+                                <li><strong>Add User:</strong> Click "Manage another account" > "Add a new user"</li>
+                                <li><strong>User Type:</strong> Choose Standard or Administrator account</li>
+                                <li><strong>Create Account:</strong> Enter username and password</li>
+                                <li><strong>Account Settings:</strong> Configure password and security settings</li>
                             </ol>
                         </div>
 
-                        <div class="gpo-card">
-                            <h4>Policy Configuration Areas</h4>
+                        <div class="feature-card">
+                            <h4>Windows 10 & 11</h4>
                             <ol>
-                                <li><strong>Computer Configuration:</strong> Policies applied to computers</li>
-                                <li><strong>User Configuration:</strong> Policies applied to user accounts</li>
-                                <li><strong>Windows Settings:</strong> Windows operating system configurations</li>
-                                <li><strong>Software Installation:</strong> Application deployment and installation policies</li>
-                                <li><strong>Scripts:</strong> Startup and shutdown scripts</li>
-                                <li><strong>Security Settings:</strong> Security policies and restrictions</li>
-                                <li><strong>Administrative Templates:</strong> Predefined policy templates</li>
-                                <li><strong>Preferences:</strong> User and computer preference settings</li>
+                                <li><strong>Settings:</strong> Open Settings > Accounts > Family & other users</li>
+                                <li><strong>Add Family Member:</strong> Click "Add a family member" for Microsoft accounts</li>
+                                <li><strong>Add Local User:</strong> Click "Add someone else to this PC"</li>
+                                <li><strong>Account Creation:</strong> Choose Microsoft account or local account</li>
+                                <li><strong>Permissions:</strong> Set account type and permissions</li>
                             </ol>
                         </div>
-                    </div>
 
-                    <div class="policy-types">
-                        <h4>Common Policy Types</h4>
-                        <ul>
-                            <li><strong>Security Policies:</strong> Password policies, account lockout, user rights</li>
-                            <li><strong>Desktop Policies:</strong> Desktop appearance, wallpaper, icons configuration</li>
-                            <li><strong>Software Policies:</strong> Application installation, restrictions, and deployment</li>
-                            <li><strong>System Policies:</strong> Device installation, registry access, command prompt</li>
-                            <li><strong>Network Policies:</strong> Network connections, offline files, drive mapping</li>
-                            <li><strong>Internet Policies:</strong> Browser settings, proxy configuration, restrictions</li>
-                            <li><strong>Windows Update Policies:</strong> Update behavior, WSUS configuration</li>
-                            <li><strong>Power Management:</strong> Power plans, sleep settings, shutdown options</li>
-                        </ul>
+                        <div class="feature-card">
+                            <h4>Windows Server 2003</h4>
+                            <ol>
+                                <li><strong>Computer Management:</strong> Right-click Computer > Manage</li>
+                                <li><strong>Local Users:</strong> Expand Local Users and Groups</li>
+                                <li><strong>New User:</strong> Right-click Users folder > New User</li>
+                                <li><strong>User Details:</strong> Enter username, password, and description</li>
+                                <li><strong>Account Options:</strong> Configure password policies and account settings</li>
+                            </ol>
+                        </div>
+
+                        <div class="feature-card">
+                            <h4>Windows Server 2008+</h4>
+                            <ol>
+                                <li><strong>Server Manager:</strong> Open Server Manager</li>
+                                <li><strong>Configuration:</strong> Navigate to Configuration > Local Users and Groups</li>
+                                <li><strong>User Creation:</strong> Right-click Users folder > New User</li>
+                                <li><strong>Advanced Settings:</strong> Configure user properties and group membership</li>
+                                <li><strong>Group Assignment:</strong> Add user to appropriate security groups</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
 
                 <div class="section">
-                    <h2>Advanced Configuration</h2>
-                    <h3>Policy Inheritance and Precedence</h3>
+                    <h2>Advanced User Management</h2>
+                    <h3>Group Membership</h3>
                     <ul>
-                        <li><strong>Local Policy:</strong> Local Group Policy overrides domain policy</li>
-                        <li><strong>Site Policy:</strong> Site policies override domain policies</li>
-                        <li><strong>Domain Policy:</strong> Domain policies override OU policies</li>
-                        <li><strong>OU Policy:</strong> OU policies override child OU policies</li>
-                        <li><strong>Block Inheritance:</strong> Can block policy inheritance at any level</li>
-                        <li><strong>Enforcement:</strong> Configure how policies are enforced</li>
-                        <li><strong>Slow Link:</strong> Configure policy processing for slow connections</li>
-                        <li><strong>Loopback Processing:</strong> Configure user policy processing mode</li>
+                        <li><strong>Administrators:</strong> Full system control and permissions</li>
+                        <li><strong>Users:</strong> Standard user access with limited permissions</li>
+                        <li><strong>Power Users:</strong> Elevated permissions for specific tasks</li>
+                        <li><strong>Remote Desktop Users:</strong> Remote access permissions</li>
+                        <li><strong>Backup Operators:</strong> Backup and restore permissions</li>
                     </ul>
 
-                    <h3>Security Filtering and Targeting</h3>
+                    <h3>User Properties Configuration</h3>
                     <ul>
-                        <li><strong>Security Groups:</strong> Apply policies only to specific security groups</li>
-                        <li><strong>WMI Filtering:</strong> Target policies based on system properties</li>
-                        <li><strong>Item-Level Targeting:</strong> Target specific registry keys or files</li>
-                        <li><strong>Authentication:</strong> Configure policy authentication requirements</li>
-                        <li><strong>Permissions:</strong> Set appropriate policy modification permissions</li>
-                        <li><strong>Delegation:</strong> Delegate GPO management to specific administrators</li>
-                        <li><strong>Auditing:</strong> Enable GPO modification and application auditing</li>
-                    </ul>
-                </div>
-
-                <div class="section">
-                    <h2>Troubleshooting Common Issues</h2>
-                    <h3>Policy Application Problems</h3>
-                    <ul>
-                        <li><strong>Not Applying:</strong> Check DNS and network connectivity</li>
-                        <li><strong>Processing Delay:</strong> Verify slow link configuration</li>
-                        <li><strong>Conflict Detection:</strong> Use Group Policy Modeling to detect conflicts</li>
-                        <li><strong>Permission Issues:</strong> Check GPO permissions and inheritance</li>
-                        <li><strong>Replication Failures:</strong> Verify SYSVOL replication status</li>
-                        <li><strong>Client Side Issues:</strong> Run gpresult /r on client machines</li>
-                        <li><strong>Event Log Errors:</strong> Check Application and System event logs</li>
-                        <li><strong>Template Corruption:</strong> Recreate corrupted ADM templates</li>
-                    </ul>
-
-                    <h3>Performance and Optimization</h3>
-                    <ul>
-                        <li><strong>Policy Bloat:</strong> Avoid overly complex or restrictive policies</li>
-                        <li><strong>Login Delays:</strong> Optimize policy processing and startup scripts</li>
-                        <li><strong>Network Bandwidth:</strong> Minimize policy processing bandwidth usage</li>
-                        <li><strong>Client Performance:</strong> Profile GPO impact on client machines</li>
-                        <li><strong>Storage Optimization:</strong> Optimize SYSVOL storage and replication</li>
-                        <li><strong>Regular Cleanup:</strong> Remove unused or obsolete policies</li>
-                        <li><strong>Documentation:</strong> Maintain detailed policy documentation</li>
+                        <li><strong>Profile Path:</strong> Set roaming profile locations</li>
+                        <li><strong>Home Directory:</strong> Configure user home folders</li>
+                        <li><strong>Login Scripts:</strong> Assign scripts for user login</li>
+                        <li><strong>Account Policies:</strong> Set password and lockout policies</li>
+                        <li><strong>Security Settings:</strong> Configure user-specific permissions</li>
                     </ul>
                 </div>
 
                 <div class="section">
                     <h2>Best Practices</h2>
-                    <h3>Policy Design Principles</h3>
-                    <ul>
-                        <li><strong>Least Privilege:</strong> Grant minimum necessary permissions only</li>
-                        <li><strong>Separation of Duties:</strong> Separate policies by function or department</li>
-                        <li><strong>Consistent Naming:</strong> Use clear, descriptive GPO naming</li>
-                        <li><strong>Documentation:</strong> Document policy purpose and configuration</li>
-                        <li><strong>Testing:</strong> Test policies in pilot groups before deployment</li>
-                        <li><strong>Regular Review:</strong> Periodically review and update policies</li>
-                        <li><strong>Backup Strategy:</strong> Backup GPOs and Group Policy configurations</li>
-                        <li><strong>Change Management:</strong> Use change control for policy modifications</li>
-                    </ul>
-
                     <h3>Security Considerations</h3>
                     <ul>
-                        <li><strong>Secure Administration:</strong> Limit GPO modification permissions</li>
-                        <li><strong>Audit Policy Changes:</strong> Enable comprehensive auditing</li>
-                        <li><strong>Regular Updates:</strong> Keep administrative templates updated</li>
-                        <li><strong>Network Security:</strong> Secure GPO replication and access</li>
-                        <li><strong>Client Security:</strong> Configure client-side policy processing security</li>
-                        <li><strong>Backup Security:</strong> Secure GPO backup files and storage</li>
-                        <li><strong>Monitoring:</strong> Implement GPO application monitoring</li>
-                        <li><strong>Compliance:</strong> Ensure policies meet organizational standards</li>
+                        <li><strong>Strong Passwords:</strong> Enforce complex password requirements</li>
+                        <li><strong>Least Privilege:</strong> Grant minimum necessary permissions</li>
+                        <li><strong>Regular Audits:</strong> Review user accounts and permissions regularly</li>
+                        <li><strong>Account Lockout:</strong> Implement account lockout policies</li>
+                        <li><strong>Multi-Factor Authentication:</strong> Use MFA when available</li>
+                    </ul>
+
+                    <h3>Account Management</h3>
+                    <ul>
+                        <li><strong>Naming Conventions:</strong> Use consistent username formats</li>
+                        <li><strong>Documentation:</strong> Maintain user account documentation</li>
+                        <li><strong>Disabled Accounts:</strong> Disable inactive accounts instead of deleting</li>
+                        <li><strong>Backup Strategies:</strong> Regular backup of user account data</li>
+                        <li><strong>Access Reviews:</strong> Periodic review of user access rights</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Troubleshooting Common Issues</h2>
+                    <h3>Login Problems</h3>
+                    <ul>
+                        <li><strong>Incorrect Password:</strong> Verify password and reset if necessary</li>
+                        <li><strong>Account Locked:</strong> Check account lockout policies and unlock</li>
+                        <li><strong>Expired Password:</strong> Update password according to policy</li>
+                        <li><strong>Profile Issues:</strong> Check user profile and permissions</li>
+                        <li><strong>Network Problems:</strong> Verify network connectivity for domain accounts</li>
+                    </ul>
+
+                    <h3>Permission Issues</h3>
+                    <ul>
+                        <li><strong>Access Denied:</strong> Check user group membership and permissions</li>
+                        <li><strong>File Access:</strong> Verify NTFS permissions and share rights</li>
+                        <li><strong>Application Issues:</strong> Check application-specific permissions</li>
+                        <li><strong>Registry Access:</strong> Verify registry permissions if needed</li>
+                        <li><strong>Service Access:</strong> Check service permissions and dependencies</li>
                     </ul>
                 </div>
             </div>

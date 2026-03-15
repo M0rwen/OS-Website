@@ -4,211 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Windows Server 2003 - Yunice Jam Matabile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e0d4 50%, #f0e6e8 100%);
-            min-height: 100vh;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #d4c4b0;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 300;
-            color: #6b5b73;
-        }
-
-        nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-btn {
-            background: none;
-            border: none;
-            font-size: 16px;
-            color: #6b5b73;
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .dropdown-btn:hover {
-            background-color: #d4c4b0;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            z-index: 1;
-            border-radius: 4px;
-            top: 100%;
-            margin-top: 4px;
-        }
-
-        .dropdown-content a {
-            color: #333;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            transition: background-color 0.3s;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0e6e8;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        main {
-            padding: 40px 0;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #6b5b73;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        h1 {
-            font-size: 42px;
-            font-weight: 200;
-            color: #6b5b73;
-            margin-bottom: 30px;
-        }
-
-        .content {
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            color: #6b5b73;
-            font-size: 28px;
-            font-weight: 300;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #d4c4b0;
-            padding-bottom: 10px;
-        }
-
-        .section h3 {
-            color: #8b7b83;
-            font-size: 20px;
-            font-weight: 400;
-            margin-bottom: 15px;
-            margin-top: 25px;
-        }
-
-        .section p, .section li {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .section ul {
-            margin-left: 20px;
-        }
-
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .spec-card {
-            background: #f8f4f0;
-            padding: 20px;
-            border-radius: 6px;
-            border-left: 4px solid #6b5b73;
-        }
-
-        .spec-card h4 {
-            color: #6b5b73;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .spec-card p {
-            color: #666;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        .video-section {
-            background: #f8f4f0;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .video-link {
-            display: inline-block;
-            background: #6b5b73;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            margin-top: 15px;
-            transition: background-color 0.3s;
-        }
-
-        .video-link:hover {
-            background: #8b7b83;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid #d4c4b0;
-            color: #8b7b83;
-            font-size: 14px;
-            margin-top: 60px;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -216,18 +13,7 @@
             <div class="logo">Windows Server</div>
             <nav>
                 <div class="dropdown">
-                    <button class="dropdown-btn">Activities dashboard</button>
-                    <div class="dropdown-content">
-                        <a href="index.html#windows-videos">Installation Videos</a>
-                        <a href="windows2008.html">Windows 2008 Guide</a>
-                        <a href="windows2008.html#features">Features</a>
-                        <a href="windows2008.html#editions">Editions</a>
-                        <a href="windows2008.html#system-requirements">System Requirements</a>
-                        <a href="windows2008.html#installation">Installation</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropdown-btn">Windows Server</button>
+                    <button class="dropdown-btn">Windows Installation</button>
                     <div class="dropdown-content">
                         <a href="windows95.html">Windows 95</a>
                         <a href="windows98.html">Windows 98</a>
@@ -241,6 +27,39 @@
                         <a href="windows8.html">Windows 8</a>
                         <a href="windows10.html">Windows 10</a>
                         <a href="windows11.html">Windows 11</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Activities</button>
+                    <div class="dropdown-content dropdown-mega">
+                        <a href="adding-users.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/88oD_THHfXo/hqdefault.jpg" alt="Activity 1: Adding Users">
+                            <span>Activity 1: Adding Users</span>
+                        </a>
+                        <a href="dhcp-role.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/jHyikf1OZU8/hqdefault.jpg" alt="Activity 2: DHCP Role">
+                            <span>Activity 2: DHCP Role</span>
+                        </a>
+                        <a href="domain.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/6jtisoMWv4A/hqdefault.jpg" alt="Activity 3: Domain">
+                            <span>Activity 3: Domain</span>
+                        </a>
+                        <a href="raid-installations.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/8HVN7xkL8aM/hqdefault.jpg" alt="Activity 4: RAID Installations">
+                            <span>Activity 4: RAID Installations</span>
+                        </a>
+                        <a href="web-services.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/xfDRo3sbqsc/hqdefault.jpg" alt="Activity 5: Web Services">
+                            <span>Activity 5: Web Services</span>
+                        </a>
+                        <a href="file-services.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/NQ6gLblRtVw/hqdefault.jpg" alt="Activity 6: File Services">
+                            <span>Activity 6: File Services</span>
+                        </a>
+                        <a href="gpo-configuration.html" class="activity-card">
+                            <img src="https://img.youtube.com/vi/No4VYTaY4ko/hqdefault.jpg" alt="Activity 7: GPO Configuration">
+                            <span>Activity 7: GPO Configuration</span>
+                        </a>
                     </div>
                 </div>
             </nav>
