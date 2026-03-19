@@ -347,6 +347,33 @@
                     </ul>
                     <p>Windows 10 will continue to receive support until October 14, 2025, after which users will need to upgrade to Windows 11 for continued security updates.</p>
                 </div>
+
+                <div class="section">
+                    <h2>Virtual Machine Installation</h2>
+                    <p>Follow this video guide and the step-by-step instructions below to install Windows 10 inside a Virtual Machine using VirtualBox — no need to modify your actual operating system.</p>
+                    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;margin:1.5rem 0;">
+                        <iframe
+                            src="https://www.youtube.com/embed/M6QH-MhvclI"
+                            title="How to Install Windows 10 in VirtualBox"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h3>Step-by-Step Guide</h3>
+                    <ol>
+                        <li><strong>Download VirtualBox:</strong> Visit <a href="https://www.virtualbox.org" target="_blank" rel="noopener">virtualbox.org</a> and download the latest version for your host operating system. Install it with default settings.</li>
+                        <li><strong>Get a Windows 10 ISO:</strong> Download the official Windows 10 ISO from Microsoft's website using the Media Creation Tool, or use an existing ISO file.</li>
+                        <li><strong>Create a New Virtual Machine:</strong> Open VirtualBox, click <em>New</em>, name it "Windows 10", set the Type to <em>Microsoft Windows</em> and Version to <em>Windows 10 (64-bit)</em>.</li>
+                        <li><strong>Allocate RAM:</strong> Assign at least <strong>2048 MB (2 GB)</strong> of RAM. 4 GB is recommended for a smoother experience.</li>
+                        <li><strong>Create a Virtual Hard Disk:</strong> Choose <em>Create a virtual hard disk now</em>, select <em>VDI (VirtualBox Disk Image)</em>, choose <em>Dynamically allocated</em>, and set the size to at least <strong>32 GB</strong>.</li>
+                        <li><strong>Attach the ISO:</strong> Select your new VM, go to <em>Settings → Storage</em>, click the empty optical drive under the Controller, then click the disk icon and select your Windows 10 ISO file.</li>
+                        <li><strong>Start the VM:</strong> Click <em>Start</em>. The VM will boot from the ISO and launch the Windows 10 setup wizard.</li>
+                        <li><strong>Install Windows 10:</strong> Follow the on-screen setup — select your language, click <em>Install Now</em>, enter a product key (or skip), choose <em>Custom: Install Windows only</em>, and select the virtual disk.</li>
+                        <li><strong>Complete Setup:</strong> Wait for installation to finish. The VM will restart automatically. Complete the initial Windows 10 setup (region, keyboard, account).</li>
+                        <li><strong>Install Guest Additions:</strong> Once inside Windows 10, go to VirtualBox menu → <em>Devices → Insert Guest Additions CD Image</em>, then run the installer inside the VM for better performance and screen resolution.</li>
+                    </ol>
+                </div>
             </div>
         </main>
 

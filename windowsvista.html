@@ -321,6 +321,34 @@
                     </ul>
                     <p>Windows Vista served as a foundation for Windows 7, which addressed many of Vista's criticisms while retaining its technological innovations.</p>
                 </div>
+
+                <div class="section">
+                    <h2>Virtual Machine Installation</h2>
+                    <p>Follow this video guide and the step-by-step instructions below to install Windows Vista inside a Virtual Machine using VirtualBox — no need to modify your actual operating system.</p>
+                    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;margin:1.5rem 0;">
+                        <iframe
+                            src="https://www.youtube.com/embed/1ITMDUYsL8Q"
+                            title="How to Install Windows Vista in VirtualBox"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h3>Step-by-Step Guide</h3>
+                    <ol>
+                        <li><strong>Download VirtualBox:</strong> Visit <a href="https://www.virtualbox.org" target="_blank" rel="noopener">virtualbox.org</a> and download the latest version for your host operating system. Install it with default settings.</li>
+                        <li><strong>Get a Windows Vista ISO:</strong> Obtain a legitimate Windows Vista ISO file. You can source it from an official MSDN archive or use a physical disc and convert it to an ISO using a tool like ImgBurn.</li>
+                        <li><strong>Create a New Virtual Machine:</strong> Open VirtualBox, click <em>New</em>, name it "Windows Vista", set the Type to <em>Microsoft Windows</em> and Version to <em>Windows Vista (64-bit)</em> or <em>(32-bit)</em> based on your ISO.</li>
+                        <li><strong>Allocate RAM:</strong> Assign at least <strong>1024 MB (1 GB)</strong> of RAM. 2 GB is recommended for the Aero interface and a smoother experience.</li>
+                        <li><strong>Create a Virtual Hard Disk:</strong> Choose <em>Create a virtual hard disk now</em>, select <em>VDI (VirtualBox Disk Image)</em>, choose <em>Dynamically allocated</em>, and set the size to at least <strong>40 GB</strong>.</li>
+                        <li><strong>Enable 3D Acceleration:</strong> In <em>Settings → Display</em>, increase Video Memory to <strong>128 MB</strong> and check <em>Enable 3D Acceleration</em> to support the Aero Glass interface.</li>
+                        <li><strong>Attach the ISO:</strong> Go to <em>Settings → Storage</em>, click the empty optical drive under the Controller, then click the disk icon and select your Windows Vista ISO file.</li>
+                        <li><strong>Start the VM:</strong> Click <em>Start</em>. The VM will boot from the ISO and launch the Windows Vista setup wizard.</li>
+                        <li><strong>Install Windows Vista:</strong> Select your language and region, click <em>Install Now</em>, accept the license, choose <em>Custom (advanced)</em> installation, and select the virtual disk partition.</li>
+                        <li><strong>Complete Setup:</strong> Wait for installation to complete — the VM will restart several times. Set up your username, password, and complete the Windows Welcome experience.</li>
+                        <li><strong>Install Guest Additions:</strong> Once inside Windows Vista, go to VirtualBox menu → <em>Devices → Insert Guest Additions CD Image</em>, then run the installer inside the VM for better screen resolution, mouse integration, and performance.</li>
+                    </ol>
+                </div>
             </div>
         </main>
 
